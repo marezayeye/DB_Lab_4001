@@ -43,7 +43,8 @@ namespace OS_Lab_4001
                 //
                 //
                 //
-                this.Visible = false;     //this is method2 
+                //
+                this.Visible = false;     // fuck this shit :))))))))))))))   this is method2 
                 dashboard s = new dashboard();  
                 s.Visible = true;
             }
