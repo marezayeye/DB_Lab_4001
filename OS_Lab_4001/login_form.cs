@@ -42,7 +42,7 @@ namespace OS_Lab_4001
                 MessageBox.Show("ورود موفقیت آمیز بود");
                 //
                 //
-                //
+                //legion laptops everywhere :)
                 //
                 this.Visible = false;     // MFA Was Here ...
                 dashboard s = new dashboard();  
