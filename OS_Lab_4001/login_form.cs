@@ -42,7 +42,7 @@ namespace OS_Lab_4001
                 MessageBox.Show("ورود موفقیت آمیز بود");
                 //
                 //
-                //
+                //legion laptops everywhere :)
                 //
                 this.Visible = false;     // every thing is ok about this fucking shit  this is method2 
                 dashboard s = new dashboard();  
