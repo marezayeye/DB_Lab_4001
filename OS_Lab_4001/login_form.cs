@@ -44,7 +44,7 @@ namespace OS_Lab_4001
                 //
                 //
                 //
-                this.Visible = false;     // every thing is ok about this fucking shit  this is method2 
+                this.Visible = false;     // MFA Was Here ...
                 dashboard s = new dashboard();  
                 s.Visible = true;
             }
@@ -56,6 +56,11 @@ namespace OS_Lab_4001
          }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_form_Load(object sender, EventArgs e)
         {
 
         }
