@@ -23,5 +23,12 @@ namespace OS_Lab_4001
             category_form cf = new category_form();
             cf.Visible=true;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            lend_form l = new lend_form();
+            l.Visible = true;
+        }
     }
 }
