@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,16 @@ using System.Windows.Forms;
 
 namespace OS_Lab_4001
 {
-    public partial class dashboard : Form
+    public partial class category_form : Form
     {
-        public dashboard()
+        private SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader dr;
+        public category_form()
         {
             InitializeComponent();
+            con = new SqlConnection("Data Source=.;Initial Catalog=Library_DB;Integrated Security=True");
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            category_form cf = new category_form();
-            cf.Visible=true;
-        }
     }
 }
