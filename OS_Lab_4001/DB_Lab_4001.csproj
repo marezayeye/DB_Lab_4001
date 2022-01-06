@@ -57,6 +57,12 @@
     <Compile Include="category_form.Designer.cs">
       <DependentUpon>category_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="lend_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lend_form.Designer.cs">
+      <DependentUpon>lend_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
