@@ -29,7 +29,9 @@ namespace OS_Lab_4001
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            this.Visible = false;     
+            dashboard d = new dashboard();
+            d.Visible = true;
         }
     }
 }
