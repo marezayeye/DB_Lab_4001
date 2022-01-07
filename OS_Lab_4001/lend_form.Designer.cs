@@ -193,6 +193,7 @@ namespace OS_Lab_4001
             this.Controls.Add(this.button1);
             this.Name = "lend_form";
             this.Text = "مدیریت امانات";
+            this.Load += new System.EventHandler(this.lend_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

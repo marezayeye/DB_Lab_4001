@@ -33,5 +33,10 @@ namespace OS_Lab_4001
             dashboard d = new dashboard();
             d.Visible = true;
         }
+
+        private void lend_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
