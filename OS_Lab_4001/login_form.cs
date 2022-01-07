@@ -40,11 +40,8 @@ namespace OS_Lab_4001
             if (dr.Read())
             {
                 MessageBox.Show("ورود موفقیت آمیز بود");
-                //ccccccccccccccccccccccccccccccccc
-                //aisan
-                //legion laptops everywhere :)
-                //
-                this.Visible = false;     // MFA Was Here ...
+                
+                this.Visible = false;     //
                 dashboard s = new dashboard();  
                 s.Visible = true;
             }
