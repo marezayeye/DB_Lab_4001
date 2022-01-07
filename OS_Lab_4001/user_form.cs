@@ -44,6 +44,28 @@ namespace OS_Lab_4001
 
         private void button6_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            dashboard d = new dashboard();
+            d.Visible = true;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
