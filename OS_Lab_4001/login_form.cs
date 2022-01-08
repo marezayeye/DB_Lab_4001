@@ -41,7 +41,7 @@ namespace OS_Lab_4001
             {
                 MessageBox.Show("ورود موفقیت آمیز بود");
                 
-                this.Visible = false;     //
+                this.Visible = false;     //testing gitignore rule
                 dashboard s = new dashboard();  
                 s.Visible = true;
             }
