@@ -63,6 +63,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library_DBDataSet.cs">
+      <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="user_form.cs">
       <SubType>Form</SubType>
     </Compile>

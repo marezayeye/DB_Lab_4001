@@ -80,5 +80,52 @@ namespace OS_Lab_4001
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection();
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.CommandText = "delete from user where User_id='"+user_id.Text+"'";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("حذف غضویت با موفقیت انجام شد"); 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection();
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.CommandText = "select * from User where User_id='"+user_id.Text+"' ";
+            SqlDataReader dr = cmd.ExecuteReader();
+            con.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            con = new SqlConnection();
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.CommandText = "select * from User where User_LastName='" +user_familyname.Text+ "' ";
+            SqlDataReader dr = cmd.ExecuteReader();
+            con.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
