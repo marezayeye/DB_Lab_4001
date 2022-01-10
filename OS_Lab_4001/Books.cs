@@ -36,10 +36,24 @@ namespace OS_Lab_4001
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            lend_form l = new lend_form();
+            l.Visible = true;
+        }
+
+        private void scale_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            category_form cf = new category_form();
+            cf.Visible = true;
+        }
+
+        private void eddit_button_Click(object sender, EventArgs e)
         {
 
         }

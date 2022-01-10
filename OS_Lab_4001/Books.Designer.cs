@@ -29,149 +29,151 @@ namespace OS_Lab_4001
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.remove_button = new System.Windows.Forms.Button();
+            this.add_button = new System.Windows.Forms.Button();
+            this.book_name_box = new System.Windows.Forms.TextBox();
+            this.eddit_button = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
+            this.back_dashboard_button = new System.Windows.Forms.Button();
+            this.lend_button = new System.Windows.Forms.Button();
+            this.scale_button = new System.Windows.Forms.Button();
+            this.membership_button = new System.Windows.Forms.Button();
+            this.barcode_box = new System.Windows.Forms.TextBox();
+            this.translator_name_box = new System.Windows.Forms.TextBox();
+            this.publisher_name_box = new System.Windows.Forms.TextBox();
+            this.athuur_name_box = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // remove_button
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(523, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "حذف";
-            this.button1.UseVisualStyleBackColor = false;
+            this.remove_button.BackColor = System.Drawing.Color.Red;
+            this.remove_button.Location = new System.Drawing.Point(523, 37);
+            this.remove_button.Name = "remove_button";
+            this.remove_button.Size = new System.Drawing.Size(75, 31);
+            this.remove_button.TabIndex = 0;
+            this.remove_button.Text = "حذف";
+            this.remove_button.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // add_button
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(442, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "اضافه";
-            this.button2.UseVisualStyleBackColor = false;
+            this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.add_button.Location = new System.Drawing.Point(442, 36);
+            this.add_button.Name = "add_button";
+            this.add_button.Size = new System.Drawing.Size(75, 32);
+            this.add_button.TabIndex = 1;
+            this.add_button.Text = "اضافه";
+            this.add_button.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // book_name_box
             // 
-            this.textBox1.Location = new System.Drawing.Point(695, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "نام کتاب";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.book_name_box.Location = new System.Drawing.Point(695, 37);
+            this.book_name_box.Name = "book_name_box";
+            this.book_name_box.Size = new System.Drawing.Size(158, 22);
+            this.book_name_box.TabIndex = 2;
+            this.book_name_box.Text = "نام کتاب";
+            this.book_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button3
+            // eddit_button
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.Location = new System.Drawing.Point(361, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "ویرایش";
-            this.button3.UseVisualStyleBackColor = false;
+            this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eddit_button.Location = new System.Drawing.Point(361, 36);
+            this.eddit_button.Name = "eddit_button";
+            this.eddit_button.Size = new System.Drawing.Size(75, 32);
+            this.eddit_button.TabIndex = 3;
+            this.eddit_button.Text = "ویرایش";
+            this.eddit_button.UseVisualStyleBackColor = false;
+            this.eddit_button.Click += new System.EventHandler(this.eddit_button_Click);
             // 
-            // button4
+            // search_button
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Location = new System.Drawing.Point(604, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "جستجو";
-            this.button4.UseVisualStyleBackColor = false;
+            this.search_button.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.search_button.Location = new System.Drawing.Point(604, 36);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(75, 32);
+            this.search_button.TabIndex = 4;
+            this.search_button.Text = "جستجو";
+            this.search_button.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // back_dashboard_button
             // 
-            this.button5.BackColor = System.Drawing.Color.Aqua;
-            this.button5.Location = new System.Drawing.Point(12, 36);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "بازگشت";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.back_dashboard_button.BackColor = System.Drawing.Color.Aqua;
+            this.back_dashboard_button.Location = new System.Drawing.Point(12, 25);
+            this.back_dashboard_button.Name = "back_dashboard_button";
+            this.back_dashboard_button.Size = new System.Drawing.Size(75, 34);
+            this.back_dashboard_button.TabIndex = 5;
+            this.back_dashboard_button.Text = "بازگشت";
+            this.back_dashboard_button.UseVisualStyleBackColor = false;
+            this.back_dashboard_button.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // lend_button
             // 
-            this.button6.BackColor = System.Drawing.Color.Aqua;
-            this.button6.Location = new System.Drawing.Point(12, 123);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "امانات";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.lend_button.BackColor = System.Drawing.Color.Aqua;
+            this.lend_button.Location = new System.Drawing.Point(12, 146);
+            this.lend_button.Name = "lend_button";
+            this.lend_button.Size = new System.Drawing.Size(75, 29);
+            this.lend_button.TabIndex = 6;
+            this.lend_button.Text = "امانات";
+            this.lend_button.UseVisualStyleBackColor = false;
+            this.lend_button.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // scale_button
             // 
-            this.button7.BackColor = System.Drawing.Color.Aqua;
-            this.button7.Location = new System.Drawing.Point(12, 94);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "دسته بندی";
-            this.button7.UseVisualStyleBackColor = false;
+            this.scale_button.BackColor = System.Drawing.Color.Aqua;
+            this.scale_button.Location = new System.Drawing.Point(12, 105);
+            this.scale_button.Name = "scale_button";
+            this.scale_button.Size = new System.Drawing.Size(75, 35);
+            this.scale_button.TabIndex = 7;
+            this.scale_button.Text = "دسته بندی";
+            this.scale_button.UseVisualStyleBackColor = false;
+            this.scale_button.Click += new System.EventHandler(this.scale_button_Click);
             // 
-            // button8
+            // membership_button
             // 
-            this.button8.BackColor = System.Drawing.Color.Aqua;
-            this.button8.Location = new System.Drawing.Point(12, 65);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "اعضا";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.membership_button.BackColor = System.Drawing.Color.Aqua;
+            this.membership_button.Location = new System.Drawing.Point(12, 65);
+            this.membership_button.Name = "membership_button";
+            this.membership_button.Size = new System.Drawing.Size(75, 34);
+            this.membership_button.TabIndex = 8;
+            this.membership_button.Text = "اعضا";
+            this.membership_button.UseVisualStyleBackColor = false;
+            this.membership_button.Click += new System.EventHandler(this.button8_Click);
             // 
-            // textBox2
+            // barcode_box
             // 
-            this.textBox2.Location = new System.Drawing.Point(695, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 22);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "بارکد";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.barcode_box.Location = new System.Drawing.Point(695, 151);
+            this.barcode_box.Name = "barcode_box";
+            this.barcode_box.Size = new System.Drawing.Size(158, 22);
+            this.barcode_box.TabIndex = 9;
+            this.barcode_box.Text = "بارکد";
+            this.barcode_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // translator_name_box
             // 
-            this.textBox3.Location = new System.Drawing.Point(695, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 22);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "مترجم";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.translator_name_box.Location = new System.Drawing.Point(695, 123);
+            this.translator_name_box.Name = "translator_name_box";
+            this.translator_name_box.Size = new System.Drawing.Size(158, 22);
+            this.translator_name_box.TabIndex = 10;
+            this.translator_name_box.Text = "مترجم";
+            this.translator_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.translator_name_box.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // publisher_name_box
             // 
-            this.textBox4.Location = new System.Drawing.Point(695, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 22);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Text = "ناشر";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.publisher_name_box.Location = new System.Drawing.Point(695, 93);
+            this.publisher_name_box.Name = "publisher_name_box";
+            this.publisher_name_box.Size = new System.Drawing.Size(158, 22);
+            this.publisher_name_box.TabIndex = 11;
+            this.publisher_name_box.Text = "ناشر";
+            this.publisher_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // athuur_name_box
             // 
-            this.textBox5.Location = new System.Drawing.Point(695, 65);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 22);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.Text = "نویسنده";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.athuur_name_box.Location = new System.Drawing.Point(695, 65);
+            this.athuur_name_box.Name = "athuur_name_box";
+            this.athuur_name_box.Size = new System.Drawing.Size(158, 22);
+            this.athuur_name_box.TabIndex = 12;
+            this.athuur_name_box.Text = "نویسنده";
+            this.athuur_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Books
             // 
@@ -179,19 +181,19 @@ namespace OS_Lab_4001
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(889, 524);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.athuur_name_box);
+            this.Controls.Add(this.publisher_name_box);
+            this.Controls.Add(this.translator_name_box);
+            this.Controls.Add(this.barcode_box);
+            this.Controls.Add(this.membership_button);
+            this.Controls.Add(this.scale_button);
+            this.Controls.Add(this.lend_button);
+            this.Controls.Add(this.back_dashboard_button);
+            this.Controls.Add(this.search_button);
+            this.Controls.Add(this.eddit_button);
+            this.Controls.Add(this.book_name_box);
+            this.Controls.Add(this.add_button);
+            this.Controls.Add(this.remove_button);
             this.Name = "Books";
             this.Text = "Books";
             this.Load += new System.EventHandler(this.Books_Load);
@@ -202,18 +204,18 @@ namespace OS_Lab_4001
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button remove_button;
+        private System.Windows.Forms.Button add_button;
+        private System.Windows.Forms.TextBox book_name_box;
+        private System.Windows.Forms.Button eddit_button;
+        private System.Windows.Forms.Button search_button;
+        private System.Windows.Forms.Button back_dashboard_button;
+        private System.Windows.Forms.Button lend_button;
+        private System.Windows.Forms.Button scale_button;
+        private System.Windows.Forms.Button membership_button;
+        private System.Windows.Forms.TextBox barcode_box;
+        private System.Windows.Forms.TextBox translator_name_box;
+        private System.Windows.Forms.TextBox publisher_name_box;
+        private System.Windows.Forms.TextBox athuur_name_box;
     }
 }

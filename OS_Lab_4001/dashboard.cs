@@ -37,5 +37,17 @@ namespace OS_Lab_4001
             Books cf = new Books();
             cf.Visible = true;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            login_form cf = new login_form();
+            cf.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
