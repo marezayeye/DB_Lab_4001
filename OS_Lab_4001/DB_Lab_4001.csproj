@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books.Designer.cs">
+      <DependentUpon>Books.cs</DependentUpon>
+    </Compile>
     <Compile Include="Library_DBDataSet.cs">
       <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books.resx">
+      <DependentUpon>Books.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>
