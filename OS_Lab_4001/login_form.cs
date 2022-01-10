@@ -35,14 +35,14 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "Select * From tblAdmin where aUser ='"+textBox1.Text+"' And aPass = '"+textBox2.Text +"'";
+            cmd.CommandText = "Select * From tblAdmin where aUser ='" + textBox1.Text + "' And aPass = '" + textBox2.Text + "'";
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 MessageBox.Show("ورود موفقیت آمیز بود");
-                
+
                 this.Visible = false;     //testing gitignore rule
-                dashboard s = new dashboard();  
+                dashboard s = new dashboard();
                 s.Visible = true;
             }
             else
@@ -50,7 +50,7 @@ namespace OS_Lab_4001
                 MessageBox.Show("نام کاربری یا رمز عبور اشتباه است");
             }
             con.Close();
-         }
+        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

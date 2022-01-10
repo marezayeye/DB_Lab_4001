@@ -31,7 +31,13 @@ namespace OS_Lab_4001
         //search
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-
+            // these code are test and not connected tp DB
+            //string SearchedText = textBox2.Text;
+            //List<string> test = new List<string>()
+            //{
+            //    "one","two","three"
+            //};
+            //this.dataGridView1.DataSource = test.Contains(SearchedText.ToLower());
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -58,7 +64,16 @@ namespace OS_Lab_4001
 
         private void category_form_Load(object sender, EventArgs e)
         {
+            // these code are test and not connected tp DB
+            //List<string> test = new List<string>()
+            //{
+            //    "one","two","three"
+            //};
+            //this.dataGridView1.DataSource = test;
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }
