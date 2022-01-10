@@ -22,5 +22,43 @@ namespace OS_Lab_4001
             con = new SqlConnection("Data Source=.;Initial Catalog=Library_DB;Integrated Security=True");
         }
 
+        //add new catego
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //search
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        //exit to dashboard
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            dashboard d = new dashboard();
+            d.Visible = true;
+        }
+
+        private void lend_form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
