@@ -30,5 +30,12 @@ namespace OS_Lab_4001
             lend_form l = new lend_form();
             l.Visible = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Books cf = new Books();
+            cf.Visible = true;
+        }
     }
 }
