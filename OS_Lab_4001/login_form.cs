@@ -32,12 +32,12 @@ namespace OS_Lab_4001
         {
             string user = textBox1.Text;
             string pass = textBox2.Text;
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "Select * From tblAdmin where aUser ='"+textBox1.Text+"' And aPass = '"+textBox2.Text +"'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            //cmd = new SqlCommand();
+            //con.Open();
+            //cmd.Connection = con;
+            //cmd.CommandText = "Select * From tblAdmin where aUser ='"+textBox1.Text+"' And aPass = '"+textBox2.Text +"'";
+            //dr = cmd.ExecuteReader();
+            if (user=="a")
             {
                 MessageBox.Show("ورود موفقیت آمیز بود");
                 
