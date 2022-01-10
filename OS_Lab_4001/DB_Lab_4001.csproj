@@ -63,17 +63,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Books.cs">
+    <Compile Include="Books_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Books.Designer.cs">
-      <DependentUpon>Books.cs</DependentUpon>
+    <Compile Include="Books_form.Designer.cs">
+      <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_new_books_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_new_books_form.Designer.cs">
+      <DependentUpon>add_new_books_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Library_DBDataSet.cs">
       <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
@@ -112,11 +118,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Books.resx">
-      <DependentUpon>Books.cs</DependentUpon>
+    <EmbeddedResource Include="Books_form.resx">
+      <DependentUpon>Books_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_new_books_form.resx">
+      <DependentUpon>add_new_books_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>

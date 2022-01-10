@@ -1,7 +1,7 @@
 ﻿
 namespace OS_Lab_4001
 {
-    partial class Books
+    partial class Books_form
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,17 @@ namespace OS_Lab_4001
             this.translator_name_box = new System.Windows.Forms.TextBox();
             this.publisher_name_box = new System.Windows.Forms.TextBox();
             this.athuur_name_box = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // remove_button
             // 
             this.remove_button.BackColor = System.Drawing.Color.Red;
-            this.remove_button.Location = new System.Drawing.Point(523, 37);
+            this.remove_button.Location = new System.Drawing.Point(93, 16);
             this.remove_button.Name = "remove_button";
             this.remove_button.Size = new System.Drawing.Size(75, 31);
             this.remove_button.TabIndex = 0;
@@ -57,7 +62,7 @@ namespace OS_Lab_4001
             // add_button
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add_button.Location = new System.Drawing.Point(442, 36);
+            this.add_button.Location = new System.Drawing.Point(12, 15);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 32);
             this.add_button.TabIndex = 1;
@@ -66,17 +71,18 @@ namespace OS_Lab_4001
             // 
             // book_name_box
             // 
-            this.book_name_box.Location = new System.Drawing.Point(695, 37);
+            this.book_name_box.Location = new System.Drawing.Point(12, 102);
             this.book_name_box.Name = "book_name_box";
             this.book_name_box.Size = new System.Drawing.Size(158, 22);
             this.book_name_box.TabIndex = 2;
             this.book_name_box.Text = "نام کتاب";
             this.book_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.book_name_box.TextChanged += new System.EventHandler(this.book_name_box_TextChanged);
             // 
             // eddit_button
             // 
             this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.eddit_button.Location = new System.Drawing.Point(361, 36);
+            this.eddit_button.Location = new System.Drawing.Point(12, 53);
             this.eddit_button.Name = "eddit_button";
             this.eddit_button.Size = new System.Drawing.Size(75, 32);
             this.eddit_button.TabIndex = 3;
@@ -87,17 +93,18 @@ namespace OS_Lab_4001
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.search_button.Location = new System.Drawing.Point(604, 36);
+            this.search_button.Location = new System.Drawing.Point(93, 53);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(75, 32);
             this.search_button.TabIndex = 4;
             this.search_button.Text = "جستجو";
             this.search_button.UseVisualStyleBackColor = false;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // back_dashboard_button
             // 
             this.back_dashboard_button.BackColor = System.Drawing.Color.Aqua;
-            this.back_dashboard_button.Location = new System.Drawing.Point(12, 25);
+            this.back_dashboard_button.Location = new System.Drawing.Point(1118, 30);
             this.back_dashboard_button.Name = "back_dashboard_button";
             this.back_dashboard_button.Size = new System.Drawing.Size(75, 34);
             this.back_dashboard_button.TabIndex = 5;
@@ -108,7 +115,7 @@ namespace OS_Lab_4001
             // lend_button
             // 
             this.lend_button.BackColor = System.Drawing.Color.Aqua;
-            this.lend_button.Location = new System.Drawing.Point(12, 146);
+            this.lend_button.Location = new System.Drawing.Point(1118, 151);
             this.lend_button.Name = "lend_button";
             this.lend_button.Size = new System.Drawing.Size(75, 29);
             this.lend_button.TabIndex = 6;
@@ -119,7 +126,7 @@ namespace OS_Lab_4001
             // scale_button
             // 
             this.scale_button.BackColor = System.Drawing.Color.Aqua;
-            this.scale_button.Location = new System.Drawing.Point(12, 105);
+            this.scale_button.Location = new System.Drawing.Point(1118, 110);
             this.scale_button.Name = "scale_button";
             this.scale_button.Size = new System.Drawing.Size(75, 35);
             this.scale_button.TabIndex = 7;
@@ -130,7 +137,7 @@ namespace OS_Lab_4001
             // membership_button
             // 
             this.membership_button.BackColor = System.Drawing.Color.Aqua;
-            this.membership_button.Location = new System.Drawing.Point(12, 65);
+            this.membership_button.Location = new System.Drawing.Point(1118, 70);
             this.membership_button.Name = "membership_button";
             this.membership_button.Size = new System.Drawing.Size(75, 34);
             this.membership_button.TabIndex = 8;
@@ -140,7 +147,7 @@ namespace OS_Lab_4001
             // 
             // barcode_box
             // 
-            this.barcode_box.Location = new System.Drawing.Point(695, 151);
+            this.barcode_box.Location = new System.Drawing.Point(12, 216);
             this.barcode_box.Name = "barcode_box";
             this.barcode_box.Size = new System.Drawing.Size(158, 22);
             this.barcode_box.TabIndex = 9;
@@ -149,7 +156,7 @@ namespace OS_Lab_4001
             // 
             // translator_name_box
             // 
-            this.translator_name_box.Location = new System.Drawing.Point(695, 123);
+            this.translator_name_box.Location = new System.Drawing.Point(12, 188);
             this.translator_name_box.Name = "translator_name_box";
             this.translator_name_box.Size = new System.Drawing.Size(158, 22);
             this.translator_name_box.TabIndex = 10;
@@ -159,28 +166,87 @@ namespace OS_Lab_4001
             // 
             // publisher_name_box
             // 
-            this.publisher_name_box.Location = new System.Drawing.Point(695, 93);
+            this.publisher_name_box.Location = new System.Drawing.Point(12, 158);
             this.publisher_name_box.Name = "publisher_name_box";
             this.publisher_name_box.Size = new System.Drawing.Size(158, 22);
             this.publisher_name_box.TabIndex = 11;
             this.publisher_name_box.Text = "ناشر";
             this.publisher_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.publisher_name_box.TextChanged += new System.EventHandler(this.publisher_name_box_TextChanged);
             // 
             // athuur_name_box
             // 
-            this.athuur_name_box.Location = new System.Drawing.Point(695, 65);
+            this.athuur_name_box.Location = new System.Drawing.Point(12, 130);
             this.athuur_name_box.Name = "athuur_name_box";
             this.athuur_name_box.Size = new System.Drawing.Size(158, 22);
             this.athuur_name_box.TabIndex = 12;
             this.athuur_name_box.Text = "نویسنده";
             this.athuur_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(181, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "نام کتاب";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(181, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "نویسنده";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(181, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "بارکد";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(181, 188);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "مترجم";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(181, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "ناشر";
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(889, 524);
+            this.ClientSize = new System.Drawing.Size(1219, 753);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.athuur_name_box);
             this.Controls.Add(this.publisher_name_box);
             this.Controls.Add(this.translator_name_box);
@@ -217,5 +283,10 @@ namespace OS_Lab_4001
         private System.Windows.Forms.TextBox translator_name_box;
         private System.Windows.Forms.TextBox publisher_name_box;
         private System.Windows.Forms.TextBox athuur_name_box;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

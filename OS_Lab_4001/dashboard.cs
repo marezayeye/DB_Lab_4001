@@ -34,7 +34,7 @@ namespace OS_Lab_4001
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Books cf = new Books();
+            Books_form cf = new Books_form();
             cf.Visible = true;
         }
 

@@ -106,7 +106,7 @@ namespace OS_Lab_4001
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 180);
+            this.monthCalendar1.Location = new System.Drawing.Point(10, 180);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 

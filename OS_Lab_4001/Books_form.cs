@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OS_Lab_4001
 {
-    public partial class Books : Form
+    public partial class Books_form : Form
     {
-        public Books()
+        public Books_form()
         {
             InitializeComponent();
         }
@@ -54,6 +54,41 @@ namespace OS_Lab_4001
         }
 
         private void eddit_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void book_name_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void publisher_name_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
