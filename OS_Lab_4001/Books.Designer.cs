@@ -39,12 +39,16 @@ namespace OS_Lab_4001
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(363, 36);
+            this.button1.Location = new System.Drawing.Point(523, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -54,7 +58,7 @@ namespace OS_Lab_4001
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(282, 36);
+            this.button2.Location = new System.Drawing.Point(442, 36);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -63,17 +67,17 @@ namespace OS_Lab_4001
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(525, 37);
+            this.textBox1.Location = new System.Drawing.Point(695, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 22);
+            this.textBox1.Size = new System.Drawing.Size(158, 22);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "نام کتاب خود را وارد نمایید";
+            this.textBox1.Text = "نام کتاب";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.Location = new System.Drawing.Point(201, 36);
+            this.button3.Location = new System.Drawing.Point(361, 36);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -83,7 +87,7 @@ namespace OS_Lab_4001
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Location = new System.Drawing.Point(444, 36);
+            this.button4.Location = new System.Drawing.Point(604, 36);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -99,6 +103,7 @@ namespace OS_Lab_4001
             this.button5.TabIndex = 5;
             this.button5.Text = "بازگشت";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -109,6 +114,7 @@ namespace OS_Lab_4001
             this.button6.TabIndex = 6;
             this.button6.Text = "امانات";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -129,13 +135,55 @@ namespace OS_Lab_4001
             this.button8.TabIndex = 8;
             this.button8.Text = "اعضا";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(695, 151);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(158, 22);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.Text = "بارکد";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(695, 123);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(158, 22);
+            this.textBox3.TabIndex = 10;
+            this.textBox3.Text = "مترجم";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(695, 93);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(158, 22);
+            this.textBox4.TabIndex = 11;
+            this.textBox4.Text = "ناشر";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(695, 65);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(158, 22);
+            this.textBox5.TabIndex = 12;
+            this.textBox5.Text = "نویسنده";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(865, 498);
+            this.ClientSize = new System.Drawing.Size(889, 524);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -147,6 +195,7 @@ namespace OS_Lab_4001
             this.Controls.Add(this.button1);
             this.Name = "Books";
             this.Text = "Books";
+            this.Load += new System.EventHandler(this.Books_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +212,9 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
