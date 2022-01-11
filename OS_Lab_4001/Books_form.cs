@@ -55,7 +55,9 @@ namespace OS_Lab_4001
 
         private void eddit_button_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            eddit_book_form cf = new eddit_book_form();
+            cf.Visible = true;
         }
 
         private void book_name_box_TextChanged(object sender, EventArgs e)
@@ -91,6 +93,13 @@ namespace OS_Lab_4001
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            add_new_books_form cf = new add_new_books_form();
+            cf.Visible = true;
         }
     }
 }

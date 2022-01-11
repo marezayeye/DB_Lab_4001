@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OS_Lab_4001
 {
-    public partial class Form3 : Form
+    public partial class add_new_books_form : Form
     {
-        public Form3()
+        public add_new_books_form()
         {
             InitializeComponent();
         }

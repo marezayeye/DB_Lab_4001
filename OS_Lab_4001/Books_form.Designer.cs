@@ -68,6 +68,7 @@ namespace OS_Lab_4001
             this.add_button.TabIndex = 1;
             this.add_button.Text = "اضافه";
             this.add_button.UseVisualStyleBackColor = false;
+            this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // book_name_box
             // 
@@ -236,11 +237,11 @@ namespace OS_Lab_4001
             this.label5.TabIndex = 17;
             this.label5.Text = "ناشر";
             // 
-            // Books
+            // Books_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(1219, 753);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -260,7 +261,8 @@ namespace OS_Lab_4001
             this.Controls.Add(this.book_name_box);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.remove_button);
-            this.Name = "Books";
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Name = "Books_form";
             this.Text = "Books";
             this.Load += new System.EventHandler(this.Books_Load);
             this.ResumeLayout(false);

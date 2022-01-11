@@ -81,6 +81,12 @@
     <Compile Include="add_new_books_form.Designer.cs">
       <DependentUpon>add_new_books_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="eddit_book_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eddit_book_form.Designer.cs">
+      <DependentUpon>eddit_book_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Library_DBDataSet.cs">
       <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="add_new_books_form.resx">
       <DependentUpon>add_new_books_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eddit_book_form.resx">
+      <DependentUpon>eddit_book_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>

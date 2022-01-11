@@ -68,6 +68,7 @@ namespace OS_Lab_4001
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -87,6 +88,7 @@ namespace OS_Lab_4001
             this.button1.TabIndex = 5;
             this.button1.Text = "بررسی";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -109,6 +111,7 @@ namespace OS_Lab_4001
             this.monthCalendar1.Location = new System.Drawing.Point(10, 180);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // label3
             // 
