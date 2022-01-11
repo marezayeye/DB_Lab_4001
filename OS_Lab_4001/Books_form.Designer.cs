@@ -66,6 +66,7 @@ namespace OS_Lab_4001
             this.remove_button.TabIndex = 0;
             this.remove_button.Text = "حذف";
             this.remove_button.UseVisualStyleBackColor = false;
+            this.remove_button.Click += new System.EventHandler(this.remove_button_Click);
             // 
             // add_button
             // 
