@@ -29,7 +29,9 @@ namespace OS_Lab_4001
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            Books_form d = new Books_form();
+            d.Visible = true;
         }
 
         private void label6_Click(object sender, EventArgs e)

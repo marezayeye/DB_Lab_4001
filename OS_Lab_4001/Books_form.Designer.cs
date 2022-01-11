@@ -47,12 +47,20 @@ namespace OS_Lab_4001
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // remove_button
             // 
             this.remove_button.BackColor = System.Drawing.Color.Red;
-            this.remove_button.Location = new System.Drawing.Point(93, 16);
+            this.remove_button.Location = new System.Drawing.Point(12, 16);
             this.remove_button.Name = "remove_button";
             this.remove_button.Size = new System.Drawing.Size(75, 31);
             this.remove_button.TabIndex = 0;
@@ -62,7 +70,7 @@ namespace OS_Lab_4001
             // add_button
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add_button.Location = new System.Drawing.Point(12, 15);
+            this.add_button.Location = new System.Drawing.Point(93, 16);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 32);
             this.add_button.TabIndex = 1;
@@ -82,8 +90,8 @@ namespace OS_Lab_4001
             // 
             // eddit_button
             // 
-            this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.eddit_button.Location = new System.Drawing.Point(12, 53);
+            this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.eddit_button.Location = new System.Drawing.Point(93, 54);
             this.eddit_button.Name = "eddit_button";
             this.eddit_button.Size = new System.Drawing.Size(75, 32);
             this.eddit_button.TabIndex = 3;
@@ -94,7 +102,7 @@ namespace OS_Lab_4001
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.search_button.Location = new System.Drawing.Point(93, 53);
+            this.search_button.Location = new System.Drawing.Point(12, 53);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(75, 32);
             this.search_button.TabIndex = 4;
@@ -105,7 +113,7 @@ namespace OS_Lab_4001
             // back_dashboard_button
             // 
             this.back_dashboard_button.BackColor = System.Drawing.Color.Aqua;
-            this.back_dashboard_button.Location = new System.Drawing.Point(1118, 30);
+            this.back_dashboard_button.Location = new System.Drawing.Point(906, 12);
             this.back_dashboard_button.Name = "back_dashboard_button";
             this.back_dashboard_button.Size = new System.Drawing.Size(75, 34);
             this.back_dashboard_button.TabIndex = 5;
@@ -116,7 +124,7 @@ namespace OS_Lab_4001
             // lend_button
             // 
             this.lend_button.BackColor = System.Drawing.Color.Aqua;
-            this.lend_button.Location = new System.Drawing.Point(1118, 151);
+            this.lend_button.Location = new System.Drawing.Point(906, 133);
             this.lend_button.Name = "lend_button";
             this.lend_button.Size = new System.Drawing.Size(75, 29);
             this.lend_button.TabIndex = 6;
@@ -127,7 +135,7 @@ namespace OS_Lab_4001
             // scale_button
             // 
             this.scale_button.BackColor = System.Drawing.Color.Aqua;
-            this.scale_button.Location = new System.Drawing.Point(1118, 110);
+            this.scale_button.Location = new System.Drawing.Point(906, 92);
             this.scale_button.Name = "scale_button";
             this.scale_button.Size = new System.Drawing.Size(75, 35);
             this.scale_button.TabIndex = 7;
@@ -138,7 +146,7 @@ namespace OS_Lab_4001
             // membership_button
             // 
             this.membership_button.BackColor = System.Drawing.Color.Aqua;
-            this.membership_button.Location = new System.Drawing.Point(1118, 70);
+            this.membership_button.Location = new System.Drawing.Point(906, 52);
             this.membership_button.Name = "membership_button";
             this.membership_button.Size = new System.Drawing.Size(75, 34);
             this.membership_button.TabIndex = 8;
@@ -237,12 +245,96 @@ namespace OS_Lab_4001
             this.label5.TabIndex = 17;
             this.label5.Text = "ناشر";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(181, 244);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "مکان";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 244);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 22);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.Text = "مکان";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.Location = new System.Drawing.Point(181, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "موجودی";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 300);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(158, 22);
+            this.textBox2.TabIndex = 20;
+            this.textBox2.Text = "موجودی";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.Location = new System.Drawing.Point(181, 272);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 17);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "سال چاپ";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 272);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(158, 22);
+            this.textBox3.TabIndex = 22;
+            this.textBox3.Text = "سال چاپ";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label9.Location = new System.Drawing.Point(181, 328);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 17);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "دسته بندی";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(12, 328);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(158, 22);
+            this.textBox4.TabIndex = 24;
+            this.textBox4.Text = "دسته بندی";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Books_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(1219, 753);
+            this.ClientSize = new System.Drawing.Size(993, 530);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -290,5 +382,13 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
