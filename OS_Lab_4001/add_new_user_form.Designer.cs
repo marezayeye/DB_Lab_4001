@@ -43,11 +43,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.registerdate = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // phonenumber
             // 
-            this.phonenumber.Location = new System.Drawing.Point(152, 263);
+            this.phonenumber.Location = new System.Drawing.Point(152, 239);
             this.phonenumber.Name = "phonenumber";
             this.phonenumber.Size = new System.Drawing.Size(478, 22);
             this.phonenumber.TabIndex = 63;
@@ -55,7 +57,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(648, 266);
+            this.label9.Location = new System.Drawing.Point(648, 242);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 17);
             this.label9.TabIndex = 62;
@@ -63,35 +65,35 @@
             // 
             // gender
             // 
-            this.gender.Location = new System.Drawing.Point(152, 188);
+            this.gender.Location = new System.Drawing.Point(152, 164);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(478, 22);
             this.gender.TabIndex = 61;
             // 
             // address
             // 
-            this.address.Location = new System.Drawing.Point(152, 300);
+            this.address.Location = new System.Drawing.Point(152, 276);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(478, 22);
             this.address.TabIndex = 60;
             // 
             // birthday
             // 
-            this.birthday.Location = new System.Drawing.Point(152, 225);
+            this.birthday.Location = new System.Drawing.Point(152, 201);
             this.birthday.Name = "birthday";
             this.birthday.Size = new System.Drawing.Size(478, 22);
             this.birthday.TabIndex = 59;
             // 
             // familyname
             // 
-            this.familyname.Location = new System.Drawing.Point(152, 151);
+            this.familyname.Location = new System.Drawing.Point(152, 127);
             this.familyname.Name = "familyname";
             this.familyname.Size = new System.Drawing.Size(478, 22);
             this.familyname.TabIndex = 58;
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(152, 112);
+            this.name.Location = new System.Drawing.Point(152, 88);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(478, 22);
             this.name.TabIndex = 57;
@@ -99,7 +101,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(682, 116);
+            this.label8.Location = new System.Drawing.Point(682, 92);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 17);
             this.label8.TabIndex = 56;
@@ -108,7 +110,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(636, 153);
+            this.label7.Location = new System.Drawing.Point(636, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 17);
             this.label7.TabIndex = 55;
@@ -117,7 +119,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(661, 188);
+            this.label6.Location = new System.Drawing.Point(661, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 17);
             this.label6.TabIndex = 54;
@@ -126,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(648, 226);
+            this.label5.Location = new System.Drawing.Point(648, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 53;
@@ -135,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(661, 303);
+            this.label3.Location = new System.Drawing.Point(661, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 17);
             this.label3.TabIndex = 52;
@@ -154,12 +156,13 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Location = new System.Drawing.Point(538, 380);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 38);
             this.button2.TabIndex = 64;
             this.button2.Text = "بازگشت";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
@@ -171,11 +174,30 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "فرم عضویت";
             // 
+            // registerdate
+            // 
+            this.registerdate.Location = new System.Drawing.Point(152, 313);
+            this.registerdate.Name = "registerdate";
+            this.registerdate.Size = new System.Drawing.Size(478, 22);
+            this.registerdate.TabIndex = 67;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(637, 316);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "تاریخ ثبت نام";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // add_new_user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.registerdate);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.phonenumber);
@@ -193,6 +215,7 @@
             this.Controls.Add(this.button1);
             this.Name = "add_new_user_form";
             this.Text = "add_new_user_form";
+            this.Load += new System.EventHandler(this.add_new_user_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +238,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox registerdate;
+        private System.Windows.Forms.Label label2;
     }
 }

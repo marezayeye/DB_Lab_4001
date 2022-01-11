@@ -28,7 +28,7 @@ namespace OS_Lab_4001
             con = new SqlConnection();
             cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address) values('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "')";
+            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address,User_RegisterationDate) values ('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
@@ -40,6 +40,16 @@ namespace OS_Lab_4001
             this.Visible = false;
             user_form lm = new user_form();
             lm.Visible = true;
+        }
+
+        private void add_new_user_form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
