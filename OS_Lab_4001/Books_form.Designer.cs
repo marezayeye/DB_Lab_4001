@@ -31,30 +31,32 @@ namespace OS_Lab_4001
         {
             this.remove_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
-            this.book_name_box = new System.Windows.Forms.TextBox();
             this.eddit_button = new System.Windows.Forms.Button();
             this.search_button = new System.Windows.Forms.Button();
             this.back_dashboard_button = new System.Windows.Forms.Button();
             this.lend_button = new System.Windows.Forms.Button();
             this.scale_button = new System.Windows.Forms.Button();
             this.membership_button = new System.Windows.Forms.Button();
-            this.barcode_box = new System.Windows.Forms.TextBox();
-            this.translator_name_box = new System.Windows.Forms.TextBox();
-            this.publisher_name_box = new System.Windows.Forms.TextBox();
-            this.athuur_name_box = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // remove_button
@@ -77,16 +79,6 @@ namespace OS_Lab_4001
             this.add_button.Text = "اضافه";
             this.add_button.UseVisualStyleBackColor = false;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
-            // 
-            // book_name_box
-            // 
-            this.book_name_box.Location = new System.Drawing.Point(12, 102);
-            this.book_name_box.Name = "book_name_box";
-            this.book_name_box.Size = new System.Drawing.Size(158, 22);
-            this.book_name_box.TabIndex = 2;
-            this.book_name_box.Text = "نام کتاب";
-            this.book_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.book_name_box.TextChanged += new System.EventHandler(this.book_name_box_TextChanged);
             // 
             // eddit_button
             // 
@@ -154,172 +146,195 @@ namespace OS_Lab_4001
             this.membership_button.UseVisualStyleBackColor = false;
             this.membership_button.Click += new System.EventHandler(this.button8_Click);
             // 
-            // barcode_box
+            // label11
             // 
-            this.barcode_box.Location = new System.Drawing.Point(12, 216);
-            this.barcode_box.Name = "barcode_box";
-            this.barcode_box.Size = new System.Drawing.Size(158, 22);
-            this.barcode_box.TabIndex = 9;
-            this.barcode_box.Text = "بارکد";
-            this.barcode_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label11.Location = new System.Drawing.Point(180, 239);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 17);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "برچسب";
             // 
-            // translator_name_box
+            // textBox5
             // 
-            this.translator_name_box.Location = new System.Drawing.Point(12, 188);
-            this.translator_name_box.Name = "translator_name_box";
-            this.translator_name_box.Size = new System.Drawing.Size(158, 22);
-            this.translator_name_box.TabIndex = 10;
-            this.translator_name_box.Text = "مترجم";
-            this.translator_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.translator_name_box.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox5.Location = new System.Drawing.Point(11, 239);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(158, 22);
+            this.textBox5.TabIndex = 89;
+            this.textBox5.Text = "برچسب";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // publisher_name_box
+            // label10
             // 
-            this.publisher_name_box.Location = new System.Drawing.Point(12, 158);
-            this.publisher_name_box.Name = "publisher_name_box";
-            this.publisher_name_box.Size = new System.Drawing.Size(158, 22);
-            this.publisher_name_box.TabIndex = 11;
-            this.publisher_name_box.Text = "ناشر";
-            this.publisher_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.publisher_name_box.TextChanged += new System.EventHandler(this.publisher_name_box_TextChanged);
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10.Location = new System.Drawing.Point(180, 211);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 17);
+            this.label10.TabIndex = 88;
+            this.label10.Text = "دسته بندی";
             // 
-            // athuur_name_box
+            // textBox6
             // 
-            this.athuur_name_box.Location = new System.Drawing.Point(12, 130);
-            this.athuur_name_box.Name = "athuur_name_box";
-            this.athuur_name_box.Size = new System.Drawing.Size(158, 22);
-            this.athuur_name_box.TabIndex = 12;
-            this.athuur_name_box.Text = "نویسنده";
-            this.athuur_name_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.Location = new System.Drawing.Point(11, 211);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(158, 22);
+            this.textBox6.TabIndex = 87;
+            this.textBox6.Text = "دسته بندی";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // label12
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(181, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "نام کتاب";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label12.Location = new System.Drawing.Point(180, 186);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 17);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "سال چاپ";
             // 
-            // label2
+            // textBox7
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(181, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "نویسنده";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.textBox7.Location = new System.Drawing.Point(11, 183);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(158, 22);
+            this.textBox7.TabIndex = 85;
+            this.textBox7.Text = "سال چاپ";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
+            // label13
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(181, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "بارکد";
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label13.Location = new System.Drawing.Point(180, 270);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 17);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "موجودی";
             // 
-            // label4
+            // textBox8
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(181, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "مترجم";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.textBox8.Location = new System.Drawing.Point(11, 267);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(158, 22);
+            this.textBox8.TabIndex = 83;
+            this.textBox8.Text = "موجودی";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label5
+            // label14
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(181, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "ناشر";
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label14.Location = new System.Drawing.Point(180, 295);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(29, 17);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "مکان";
             // 
-            // label6
+            // textBox9
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(181, 244);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 17);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "مکان";
+            this.textBox9.Location = new System.Drawing.Point(11, 295);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(158, 22);
+            this.textBox9.TabIndex = 81;
+            this.textBox9.Text = "مکان";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // label15
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 244);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 22);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "مکان";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label15.Location = new System.Drawing.Point(180, 348);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 17);
+            this.label15.TabIndex = 80;
+            this.label15.Text = "ناشر";
             // 
-            // label7
+            // label16
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(181, 300);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "موجودی";
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label16.Location = new System.Drawing.Point(180, 323);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 17);
+            this.label16.TabIndex = 79;
+            this.label16.Text = "مترجم";
             // 
-            // textBox2
+            // label17
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 300);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 22);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.Text = "موجودی";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label17.Location = new System.Drawing.Point(180, 97);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 17);
+            this.label17.TabIndex = 78;
+            this.label17.Text = "بارکد";
             // 
-            // label8
+            // label18
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.Location = new System.Drawing.Point(181, 272);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 17);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "سال چاپ";
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label18.Location = new System.Drawing.Point(180, 158);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(40, 17);
+            this.label18.TabIndex = 77;
+            this.label18.Text = "نویسنده";
             // 
-            // textBox3
+            // label19
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 272);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 22);
-            this.textBox3.TabIndex = 22;
-            this.textBox3.Text = "سال چاپ";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label19.Location = new System.Drawing.Point(180, 130);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 17);
+            this.label19.TabIndex = 76;
+            this.label19.Text = "نام کتاب";
             // 
-            // label9
+            // textBox10
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label9.Location = new System.Drawing.Point(181, 328);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 17);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "دسته بندی";
+            this.textBox10.Location = new System.Drawing.Point(11, 155);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(158, 22);
+            this.textBox10.TabIndex = 75;
+            this.textBox10.Text = "نویسنده";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // textBox11
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 328);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 22);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.Text = "دسته بندی";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11.Location = new System.Drawing.Point(11, 348);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(158, 22);
+            this.textBox11.TabIndex = 74;
+            this.textBox11.Text = "ناشر";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(11, 323);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(158, 22);
+            this.textBox12.TabIndex = 73;
+            this.textBox12.Text = "مترجم";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(11, 97);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(158, 22);
+            this.textBox13.TabIndex = 72;
+            this.textBox13.Text = "بارکد";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(11, 125);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(158, 22);
+            this.textBox14.TabIndex = 71;
+            this.textBox14.Text = "نام کتاب";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Books_form
             // 
@@ -327,30 +342,32 @@ namespace OS_Lab_4001
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(993, 530);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.athuur_name_box);
-            this.Controls.Add(this.publisher_name_box);
-            this.Controls.Add(this.translator_name_box);
-            this.Controls.Add(this.barcode_box);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.membership_button);
             this.Controls.Add(this.scale_button);
             this.Controls.Add(this.lend_button);
             this.Controls.Add(this.back_dashboard_button);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.eddit_button);
-            this.Controls.Add(this.book_name_box);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.remove_button);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -366,29 +383,31 @@ namespace OS_Lab_4001
 
         private System.Windows.Forms.Button remove_button;
         private System.Windows.Forms.Button add_button;
-        private System.Windows.Forms.TextBox book_name_box;
         private System.Windows.Forms.Button eddit_button;
         private System.Windows.Forms.Button search_button;
         private System.Windows.Forms.Button back_dashboard_button;
         private System.Windows.Forms.Button lend_button;
         private System.Windows.Forms.Button scale_button;
         private System.Windows.Forms.Button membership_button;
-        private System.Windows.Forms.TextBox barcode_box;
-        private System.Windows.Forms.TextBox translator_name_box;
-        private System.Windows.Forms.TextBox publisher_name_box;
-        private System.Windows.Forms.TextBox athuur_name_box;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
     }
 }
