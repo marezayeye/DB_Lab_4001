@@ -36,7 +36,9 @@ namespace OS_Lab_4001
 
         private void button8_Click(object sender, EventArgs e)
         {
-            
+            this.Visible = false;
+            user_form o = new user_form();
+            o.Visible = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -100,6 +102,11 @@ namespace OS_Lab_4001
             this.Visible = false;
             add_new_books_form cf = new add_new_books_form();
             cf.Visible = true;
+        }
+
+        private void remove_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

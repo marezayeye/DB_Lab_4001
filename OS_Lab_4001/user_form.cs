@@ -11,45 +11,18 @@ using System.Data.SqlClient;
 
 namespace OS_Lab_4001
 {
-    public partial class lend_return_form : Form
+    public partial class user_form : Form
     {
         private SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
 
-        public lend_return_form()
+        public user_form()
         {
             InitializeComponent();
         }
 
-        private void lend_return_form_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            con = new SqlConnection();
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address) values('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "')";
-            cmd.Connection = con;
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("غضویت با موفقیت انجام شد");
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void user_form_Load(object sender, EventArgs e)
         {
 
         }
@@ -61,22 +34,14 @@ namespace OS_Lab_4001
             d.Visible = true;
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            add_new_user_form mf = new add_new_user_form();
+            mf.Visible = true;
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }
@@ -86,14 +51,14 @@ namespace OS_Lab_4001
             con = new SqlConnection();
             cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "delete from user where User_id='"+user_id.Text+"'";
+            cmd.CommandText = "delete from user where User_id='" + user_id.Text + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("حذف غضویت با موفقیت انجام شد"); 
+            MessageBox.Show("حذف غضویت با موفقیت انجام شد");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void user_id_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -103,17 +68,12 @@ namespace OS_Lab_4001
             con = new SqlConnection();
             cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "select * from User where User_id='"+user_id.Text+"' ";
+            cmd.CommandText = "select * from User where User_id='" + user_id.Text + "' ";
             SqlDataReader dr = cmd.ExecuteReader();
             con.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
         {
             con = new SqlConnection();
             cmd = new SqlCommand();
@@ -123,7 +83,7 @@ namespace OS_Lab_4001
             con.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void user_familyname_TextChanged(object sender, EventArgs e)
         {
 
         }
