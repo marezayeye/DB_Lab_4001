@@ -69,11 +69,11 @@
     <Compile Include="Books_form.Designer.cs">
       <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="new_lend_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="new_lend_form.Designer.cs">
+      <DependentUpon>new_lend_form.cs</DependentUpon>
     </Compile>
     <Compile Include="eddit_new_books_form.cs">
       <SubType>Form</SubType>
@@ -127,8 +127,8 @@
     <EmbeddedResource Include="Books_form.resx">
       <DependentUpon>Books_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="new_lend_form.resx">
+      <DependentUpon>new_lend_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="eddit_new_books_form.resx">
       <DependentUpon>eddit_new_books_form.cs</DependentUpon>
