@@ -32,7 +32,7 @@ namespace OS_Lab_4001
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("غضویت با موفقیت انجام شد");
+            MessageBox.Show("عضویت با موفقیت انجام شد");
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -58,7 +58,7 @@ namespace OS_Lab_4001
         private void eddit_button_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            eddit_book_form cf = new eddit_book_form();
+            eddit_new_books_form cf = new eddit_new_books_form();
             cf.Visible = true;
         }
 

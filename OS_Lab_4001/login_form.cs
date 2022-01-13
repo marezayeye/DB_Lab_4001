@@ -19,7 +19,7 @@ namespace OS_Lab_4001
         public login_form()
         {
             InitializeComponent();
-            con = new SqlConnection("Data Source=.;Initial Catalog=Library_DB;Integrated Security=True");
+            con = new SqlConnection("Data Source=(local);Initial Catalog=Library_DB;Integrated Security=True");
         }
        
         
