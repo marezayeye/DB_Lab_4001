@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace OS_Lab_4001
 {
     public partial class Books_form : Form
     {
+        private SqlConnection cont;
+
         public Books_form()
         {
             InitializeComponent();
+            cont = new SqlConnection("Data Source=(local);Initial Catalog=Library_DB;Integrated Security=True");
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -74,7 +78,12 @@ namespace OS_Lab_4001
 
         private void search_button_Click(object sender, EventArgs e)
         {
-      
+            cont.Open();
+            SqlDataAdapter sqlDA = new SqlDataAdapter("SELECT * FROM tblBook", cont);// Where bName='" + book_name_search + "'
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            book_dataGridView.DataSource = dtbl;
+            cont.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -109,6 +118,21 @@ namespace OS_Lab_4001
             this.Visible = false;
             remove_books_form cf = new remove_books_form();
             cf.Visible = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
