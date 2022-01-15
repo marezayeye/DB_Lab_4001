@@ -106,7 +106,9 @@ namespace OS_Lab_4001
 
         private void remove_button_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            remove_books_form cf = new remove_books_form();
+            cf.Visible = true;
         }
     }
 }

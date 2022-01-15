@@ -373,7 +373,7 @@ namespace OS_Lab_4001
             this.Controls.Add(this.remove_button);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Books_form";
-            this.Text = "Books";
+            this.Text = "کتاب ها";
             this.Load += new System.EventHandler(this.Books_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

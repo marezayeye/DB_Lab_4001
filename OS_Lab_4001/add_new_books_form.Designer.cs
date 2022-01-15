@@ -297,7 +297,7 @@ namespace OS_Lab_4001
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "add_new_books_form";
-            this.Text = "eddit_book_form";
+            this.Text = "افزودن کتاب";
             this.Load += new System.EventHandler(this.eddit_book_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

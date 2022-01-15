@@ -69,6 +69,12 @@
     <Compile Include="Books_form.Designer.cs">
       <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="remove_books_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="remove_books_form.Designer.cs">
+      <DependentUpon>remove_books_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="new_lend_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="remove_books_form.resx">
+      <DependentUpon>remove_books_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>
     </EmbeddedResource>
