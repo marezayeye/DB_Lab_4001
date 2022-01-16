@@ -14,6 +14,7 @@ namespace OS_Lab_4001
     public partial class Books_form : Form
     {
         private SqlConnection cont;
+        SqlCommand cmd ;
 
         public Books_form()
         {
@@ -79,7 +80,8 @@ namespace OS_Lab_4001
         private void search_button_Click(object sender, EventArgs e)
         {
             cont.Open();
-            SqlDataAdapter sqlDA = new SqlDataAdapter("SELECT * FROM tblBook", cont);// Where bName='" + book_name_search + "'
+            string bns = book_name_search.Text;
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook where bName like '" + bns + "'", cont);
             DataTable dtbl = new DataTable();
             sqlDA.Fill(dtbl);
             book_dataGridView.DataSource = dtbl;

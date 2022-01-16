@@ -60,8 +60,6 @@ namespace OS_Lab_4001
             this.book_name_search = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.book_dataGridView = new System.Windows.Forms.DataGridView();
-            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
-            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.books_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Athour = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +70,8 @@ namespace OS_Lab_4001
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tags = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
+            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -317,7 +317,7 @@ namespace OS_Lab_4001
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(258, 107);
+            this.textBox11.Location = new System.Drawing.Point(258, 110);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(158, 22);
             this.textBox11.TabIndex = 74;
@@ -399,16 +399,6 @@ namespace OS_Lab_4001
             this.book_dataGridView.TabIndex = 92;
             this.book_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.book_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // library_DBDataSet
-            // 
-            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
-            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libraryDBDataSetBindingSource
-            // 
-            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
-            this.libraryDBDataSetBindingSource.Position = 0;
             // 
             // books_name_data
             // 
@@ -499,6 +489,16 @@ namespace OS_Lab_4001
             this.brrowed.Name = "brrowed";
             this.brrowed.ReadOnly = true;
             this.brrowed.Width = 125;
+            // 
+            // library_DBDataSet
+            // 
+            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
+            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libraryDBDataSetBindingSource
+            // 
+            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
+            this.libraryDBDataSetBindingSource.Position = 0;
             // 
             // Books_form
             // 

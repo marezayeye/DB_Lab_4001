@@ -36,8 +36,10 @@ namespace OS_Lab_4001
             DialogResult dialog = MessageBox.Show("آیا از حذف این کتاب مطمئن هستید؟", "حذف کتاب", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialog == DialogResult.Yes)
             {
-                cmd.CommandText = "DELETE FROM tblbook WHERE bName=('"+name_box+"')";
-                cmd.ExecuteNonQuery();
+                string bns = name_box.Text;
+                SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tblBook where bName like '" + bns + "'", cont);
+                DataTable dtbl = new DataTable();
+                sqlDA.Fill(dtbl);
                 MessageBox.Show("کتاب مورد نظر با موفقیت حذف شد");
             }
             else
