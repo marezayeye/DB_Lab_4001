@@ -21,15 +21,16 @@ namespace OS_Lab_4001
         public add_new_user_form()
         {
             InitializeComponent();
+            con = new SqlConnection();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection();
+            
             cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address,User_RegisterationDate) values ('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
             cmd.Connection = con;
+            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address,User_RegisterationDate) values ('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("عضویت با موفقیت انجام شد");

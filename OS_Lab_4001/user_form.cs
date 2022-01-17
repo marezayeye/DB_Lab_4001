@@ -20,6 +20,7 @@ namespace OS_Lab_4001
         public user_form()
         {
             InitializeComponent();
+            con = new SqlConnection();
         }
 
         private void user_form_Load(object sender, EventArgs e)
@@ -48,11 +49,10 @@ namespace OS_Lab_4001
 
         private void button5_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection();
             cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "delete from user where User_id='" + user_id.Text + "'";
             cmd.Connection = con;
+            cmd.CommandText = "delete from user where User_id ='" + user_id.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("حذف غضویت با موفقیت انجام شد");
