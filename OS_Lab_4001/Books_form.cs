@@ -129,7 +129,10 @@ namespace OS_Lab_4001
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            int i;
+            i = Convert.ToInt32(book_dataGridView.SelectedCells[0].Value.ToString());
+            MessageBox.Show(i.ToString());
+
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
