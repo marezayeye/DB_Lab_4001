@@ -62,9 +62,24 @@ namespace OS_Lab_4001
 
         private void eddit_button_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            eddit_new_books_form cf = new eddit_new_books_form();
-            cf.Visible = true;
+            int i;
+            i = Convert.ToInt32(book_dataGridView.SelectedCells[0].Value.ToString());
+            try
+            {
+                cmd = new SqlCommand();
+                cont.Open();
+                cmd.Connection = cont;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "update tblBook set bId='" + barcode_books.Text + "',bName='" + book_name_search.Text + "',bAuthor='" + author_books.Text + "',bYear='" + year_books.Text + "',bCategory='" + category_books.Text + "',bTags='" + tags_books.Text + "',bBorrowd='" + borrowed_books.Text + "',bLocation='" + location_books.Text + "',bPublisher='" + publisher_books.Text + "',bTranslator='" + translator_books.Text + "' where bID=" + i + "";
+                cmd.ExecuteNonQuery();
+                cont.Close();
+                MessageBox.Show("کتاب مورد نظر با موفقیت ویرایش شد");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void book_name_box_TextChanged(object sender, EventArgs e)
@@ -109,17 +124,36 @@ namespace OS_Lab_4001
         }
 
         private void add_button_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            add_new_books_form cf = new add_new_books_form();
-            cf.Visible = true;
+        {            
+            cmd = new SqlCommand();
+            cont.Open();
+            cmd.Connection = cont;
+            cmd.CommandText = "insert into tblBook values('" + barcode_books.Text + "','" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','" + borrowed_books.Text + "','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";
+            cmd.ExecuteNonQuery();
+            cont.Close();
+            MessageBox.Show("کتاب مورد نظر با موفقیت ثبت شد");
+
         }
 
         private void remove_button_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            remove_books_form cf = new remove_books_form();
-            cf.Visible = true;
+            cmd = new SqlCommand();
+            cont.Open();
+            cmd.Connection = cont;
+            DialogResult dialog = MessageBox.Show("آیا از حذف این کتاب مطمئن هستید؟", "حذف کتاب", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                string bns = book_name_search.Text;
+                SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tblBook where bName like '" + bns + "'", cont);
+                DataTable dtbl = new DataTable();
+                sqlDA.Fill(dtbl);
+                MessageBox.Show("کتاب مورد نظر با موفقیت حذف شد");
+            }
+            else
+            {
+                MessageBox.Show("کتاب مورد نظر حذف نشد");
+            }
+            cont.Close();            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -131,11 +165,51 @@ namespace OS_Lab_4001
         {
             int i;
             i = Convert.ToInt32(book_dataGridView.SelectedCells[0].Value.ToString());
-            MessageBox.Show(i.ToString());
+            try
+            {
+                cmd = new SqlCommand();
+                cont.Open();
+                cmd.Connection = cont;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM tblbook WHERE bID=" + i + "";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    book_name_search.Text = dr["bName"].ToString();
+                    barcode_books.Text = dr["bID"].ToString();
+                    author_books.Text = dr["bAuthor"].ToString();
+                    year_books.Text = dr["bYear"].ToString();
+                    location_books.Text = dr["bLocation"].ToString();
+                    translator_books.Text = dr["bTranslator"].ToString();
+                    publisher_books.Text = dr["bPublisher"].ToString();
+                    category_books.Text = dr["bCategory"].ToString();
+                    tags_books.Text = dr["bTags"].ToString();
+                    borrowed_books.Text = dr["bBorrowd"].ToString();
+                }
+                cont.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

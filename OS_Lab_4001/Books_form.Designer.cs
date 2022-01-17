@@ -30,6 +30,7 @@ namespace OS_Lab_4001
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books_form));
             this.remove_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.eddit_button = new System.Windows.Forms.Button();
@@ -39,26 +40,27 @@ namespace OS_Lab_4001
             this.scale_button = new System.Windows.Forms.Button();
             this.membership_button = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tags_books = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.category_books = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.year_books = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.borrowed_books = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.location_books = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.author_books = new System.Windows.Forms.TextBox();
+            this.publisher_books = new System.Windows.Forms.TextBox();
+            this.translator_books = new System.Windows.Forms.TextBox();
+            this.barcode_books = new System.Windows.Forms.TextBox();
             this.book_name_search = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.book_dataGridView = new System.Windows.Forms.DataGridView();
             this.books_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +74,7 @@ namespace OS_Lab_4001
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
             this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).BeginInit();
@@ -81,7 +83,7 @@ namespace OS_Lab_4001
             // remove_button
             // 
             this.remove_button.BackColor = System.Drawing.Color.Red;
-            this.remove_button.Location = new System.Drawing.Point(12, 16);
+            this.remove_button.Location = new System.Drawing.Point(12, 33);
             this.remove_button.Name = "remove_button";
             this.remove_button.Size = new System.Drawing.Size(75, 31);
             this.remove_button.TabIndex = 0;
@@ -92,7 +94,7 @@ namespace OS_Lab_4001
             // add_button
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add_button.Location = new System.Drawing.Point(93, 16);
+            this.add_button.Location = new System.Drawing.Point(93, 33);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 32);
             this.add_button.TabIndex = 1;
@@ -103,7 +105,7 @@ namespace OS_Lab_4001
             // eddit_button
             // 
             this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.eddit_button.Location = new System.Drawing.Point(93, 54);
+            this.eddit_button.Location = new System.Drawing.Point(93, 71);
             this.eddit_button.Name = "eddit_button";
             this.eddit_button.Size = new System.Drawing.Size(75, 32);
             this.eddit_button.TabIndex = 3;
@@ -114,7 +116,7 @@ namespace OS_Lab_4001
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.search_button.Location = new System.Drawing.Point(12, 53);
+            this.search_button.Location = new System.Drawing.Point(12, 70);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(75, 32);
             this.search_button.TabIndex = 4;
@@ -176,13 +178,13 @@ namespace OS_Lab_4001
             this.label11.TabIndex = 90;
             this.label11.Text = "برچسب";
             // 
-            // textBox5
+            // tags_books
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 79);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 22);
-            this.textBox5.TabIndex = 89;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tags_books.Location = new System.Drawing.Point(12, 79);
+            this.tags_books.Name = "tags_books";
+            this.tags_books.Size = new System.Drawing.Size(158, 22);
+            this.tags_books.TabIndex = 89;
+            this.tags_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -194,13 +196,13 @@ namespace OS_Lab_4001
             this.label10.TabIndex = 88;
             this.label10.Text = "دسته بندی";
             // 
-            // textBox6
+            // category_books
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 51);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(158, 22);
-            this.textBox6.TabIndex = 87;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.category_books.Location = new System.Drawing.Point(12, 51);
+            this.category_books.Name = "category_books";
+            this.category_books.Size = new System.Drawing.Size(158, 22);
+            this.category_books.TabIndex = 87;
+            this.category_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -212,13 +214,13 @@ namespace OS_Lab_4001
             this.label12.TabIndex = 86;
             this.label12.Text = "سال چاپ";
             // 
-            // textBox7
+            // year_books
             // 
-            this.textBox7.Location = new System.Drawing.Point(476, 110);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(158, 22);
-            this.textBox7.TabIndex = 85;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.year_books.Location = new System.Drawing.Point(476, 110);
+            this.year_books.Name = "year_books";
+            this.year_books.Size = new System.Drawing.Size(158, 22);
+            this.year_books.TabIndex = 85;
+            this.year_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -230,13 +232,13 @@ namespace OS_Lab_4001
             this.label13.TabIndex = 84;
             this.label13.Text = "موجودی";
             // 
-            // textBox8
+            // borrowed_books
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 107);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(158, 22);
-            this.textBox8.TabIndex = 83;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.borrowed_books.Location = new System.Drawing.Point(12, 107);
+            this.borrowed_books.Name = "borrowed_books";
+            this.borrowed_books.Size = new System.Drawing.Size(158, 22);
+            this.borrowed_books.TabIndex = 83;
+            this.borrowed_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
@@ -248,14 +250,14 @@ namespace OS_Lab_4001
             this.label14.TabIndex = 82;
             this.label14.Text = "مکان";
             // 
-            // textBox9
+            // location_books
             // 
-            this.textBox9.Location = new System.Drawing.Point(258, 54);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(158, 22);
-            this.textBox9.TabIndex = 81;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.location_books.Location = new System.Drawing.Point(258, 54);
+            this.location_books.Name = "location_books";
+            this.location_books.Size = new System.Drawing.Size(158, 22);
+            this.location_books.TabIndex = 81;
+            this.location_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.location_books.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label15
             // 
@@ -301,76 +303,89 @@ namespace OS_Lab_4001
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label19.Location = new System.Drawing.Point(63, 96);
+            this.label19.Location = new System.Drawing.Point(63, 113);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 17);
             this.label19.TabIndex = 76;
             this.label19.Text = "نام کتاب";
             // 
-            // textBox10
+            // author_books
             // 
-            this.textBox10.Location = new System.Drawing.Point(476, 82);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(158, 22);
-            this.textBox10.TabIndex = 75;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.author_books.Location = new System.Drawing.Point(476, 82);
+            this.author_books.Name = "author_books";
+            this.author_books.Size = new System.Drawing.Size(158, 22);
+            this.author_books.TabIndex = 75;
+            this.author_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.author_books.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
-            // textBox11
+            // publisher_books
             // 
-            this.textBox11.Location = new System.Drawing.Point(258, 110);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(158, 22);
-            this.textBox11.TabIndex = 74;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.publisher_books.Location = new System.Drawing.Point(258, 110);
+            this.publisher_books.Name = "publisher_books";
+            this.publisher_books.Size = new System.Drawing.Size(158, 22);
+            this.publisher_books.TabIndex = 74;
+            this.publisher_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox12
+            // translator_books
             // 
-            this.textBox12.Location = new System.Drawing.Point(258, 82);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(158, 22);
-            this.textBox12.TabIndex = 73;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.translator_books.Location = new System.Drawing.Point(258, 82);
+            this.translator_books.Name = "translator_books";
+            this.translator_books.Size = new System.Drawing.Size(158, 22);
+            this.translator_books.TabIndex = 73;
+            this.translator_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox13
+            // barcode_books
             // 
-            this.textBox13.Location = new System.Drawing.Point(476, 54);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(158, 22);
-            this.textBox13.TabIndex = 72;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.barcode_books.Location = new System.Drawing.Point(476, 54);
+            this.barcode_books.Name = "barcode_books";
+            this.barcode_books.Size = new System.Drawing.Size(158, 22);
+            this.barcode_books.TabIndex = 72;
+            this.barcode_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // book_name_search
             // 
-            this.book_name_search.Location = new System.Drawing.Point(12, 122);
+            this.book_name_search.Location = new System.Drawing.Point(12, 139);
             this.book_name_search.Name = "book_name_search";
             this.book_name_search.Size = new System.Drawing.Size(158, 22);
             this.book_name_search.TabIndex = 71;
             this.book_name_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox13);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Location = new System.Drawing.Point(378, 317);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 191);
-            this.panel1.TabIndex = 91;
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.Controls.Add(this.borrowed_books);
+            this.panel.Controls.Add(this.label11);
+            this.panel.Controls.Add(this.barcode_books);
+            this.panel.Controls.Add(this.tags_books);
+            this.panel.Controls.Add(this.translator_books);
+            this.panel.Controls.Add(this.label10);
+            this.panel.Controls.Add(this.publisher_books);
+            this.panel.Controls.Add(this.category_books);
+            this.panel.Controls.Add(this.author_books);
+            this.panel.Controls.Add(this.label12);
+            this.panel.Controls.Add(this.label18);
+            this.panel.Controls.Add(this.year_books);
+            this.panel.Controls.Add(this.label17);
+            this.panel.Controls.Add(this.label13);
+            this.panel.Controls.Add(this.label16);
+            this.panel.Controls.Add(this.label15);
+            this.panel.Controls.Add(this.label14);
+            this.panel.Controls.Add(this.location_books);
+            this.panel.Location = new System.Drawing.Point(378, 337);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(703, 191);
+            this.panel.TabIndex = 91;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(595, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 17);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "برای ویرایش بر روی بارکد کتاب مورد نظر کلیک کنید ";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // book_dataGridView
             // 
@@ -390,7 +405,7 @@ namespace OS_Lab_4001
             this.tags,
             this.brrowed});
             this.book_dataGridView.DataSource = this.library_DBDataSet;
-            this.book_dataGridView.Location = new System.Drawing.Point(174, 16);
+            this.book_dataGridView.Location = new System.Drawing.Point(174, 33);
             this.book_dataGridView.Name = "book_dataGridView";
             this.book_dataGridView.ReadOnly = true;
             this.book_dataGridView.RowHeadersWidth = 51;
@@ -438,7 +453,7 @@ namespace OS_Lab_4001
             // 
             // location
             // 
-            this.location.DataPropertyName = "Book_Location";
+            this.location.DataPropertyName = "bLocation";
             this.location.HeaderText = "مکان";
             this.location.MinimumWidth = 6;
             this.location.Name = "location";
@@ -505,9 +520,11 @@ namespace OS_Lab_4001
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1319, 530);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.book_dataGridView);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.book_name_search);
             this.Controls.Add(this.membership_button);
@@ -522,8 +539,8 @@ namespace OS_Lab_4001
             this.Name = "Books_form";
             this.Text = "کتاب ها";
             this.Load += new System.EventHandler(this.Books_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).EndInit();
@@ -543,26 +560,26 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Button scale_button;
         private System.Windows.Forms.Button membership_button;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tags_books;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox category_books;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox year_books;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox borrowed_books;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox location_books;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox author_books;
+        private System.Windows.Forms.TextBox publisher_books;
+        private System.Windows.Forms.TextBox translator_books;
+        private System.Windows.Forms.TextBox barcode_books;
         private System.Windows.Forms.TextBox book_name_search;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView book_dataGridView;
         private System.Windows.Forms.BindingSource libraryDBDataSetBindingSource;
         private Library_DBDataSet library_DBDataSet;
@@ -576,5 +593,6 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn tags;
         private System.Windows.Forms.DataGridViewTextBoxColumn brrowed;
+        private System.Windows.Forms.Label label1;
     }
 }

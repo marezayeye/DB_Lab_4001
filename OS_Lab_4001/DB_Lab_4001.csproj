@@ -69,29 +69,11 @@
     <Compile Include="Books_form.Designer.cs">
       <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="remove_books_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="remove_books_form.Designer.cs">
-      <DependentUpon>remove_books_form.cs</DependentUpon>
-    </Compile>
     <Compile Include="new_lend_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="new_lend_form.Designer.cs">
       <DependentUpon>new_lend_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="eddit_new_books_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="eddit_new_books_form.Designer.cs">
-      <DependentUpon>eddit_new_books_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="add_new_books_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="add_new_books_form.Designer.cs">
-      <DependentUpon>add_new_books_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Library_DBDataSet.cs">
       <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
@@ -136,12 +118,6 @@
     <EmbeddedResource Include="new_lend_form.resx">
       <DependentUpon>new_lend_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="eddit_new_books_form.resx">
-      <DependentUpon>eddit_new_books_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="add_new_books_form.resx">
-      <DependentUpon>add_new_books_form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="lend_form.resx">
       <DependentUpon>lend_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,9 +133,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="remove_books_form.resx">
-      <DependentUpon>remove_books_form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>
     </EmbeddedResource>
