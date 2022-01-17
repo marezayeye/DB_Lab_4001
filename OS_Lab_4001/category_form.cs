@@ -33,7 +33,7 @@ namespace OS_Lab_4001
         {
             string SearchedText = textBox2.Text;
 
-            SqlCommand cmd = new SqlCommand("Select * from tblCategory where cCaption like '%" + SearchedText + "%'", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblCategory where Title like '%" + SearchedText + "%'", con);
 
             cmd.CommandType = CommandType.Text;
 
@@ -66,6 +66,10 @@ namespace OS_Lab_4001
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            
+            this.Visible = false;
+            Category_Add d = new Category_Add();
+            d.Visible = true;
 
         }
 

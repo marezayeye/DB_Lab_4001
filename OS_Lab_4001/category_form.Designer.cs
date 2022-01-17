@@ -65,13 +65,15 @@ namespace OS_Lab_4001
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(37, 41);
+            this.button5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Location = new System.Drawing.Point(11, 11);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 33);
+            this.button5.Size = new System.Drawing.Size(142, 56);
             this.button5.TabIndex = 21;
             this.button5.Text = "بازگشت به داشبورد";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox2
@@ -96,18 +98,20 @@ namespace OS_Lab_4001
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(616, 36);
+            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button3.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.button3.Location = new System.Drawing.Point(651, 11);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 38);
+            this.button3.Size = new System.Drawing.Size(138, 56);
             this.button3.TabIndex = 16;
             this.button3.Text = "ثبت دسته بندی جدید";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // searchbtn
             // 
-            this.searchbtn.Location = new System.Drawing.Point(215, 110);
+            this.searchbtn.Location = new System.Drawing.Point(317, 142);
             this.searchbtn.Margin = new System.Windows.Forms.Padding(2);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(85, 28);

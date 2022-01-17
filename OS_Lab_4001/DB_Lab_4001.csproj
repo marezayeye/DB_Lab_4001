@@ -51,6 +51,12 @@
     <Compile Include="add_new_user_form.Designer.cs">
       <DependentUpon>add_new_user_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category_Add.Designer.cs">
+      <DependentUpon>Category_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="add_new_user_form.resx">
       <DependentUpon>add_new_user_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Add.resx">
+      <DependentUpon>Category_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="category_form.resx">
       <DependentUpon>category_form.cs</DependentUpon>
