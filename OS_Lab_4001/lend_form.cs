@@ -20,6 +20,8 @@ namespace OS_Lab_4001
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
+            new_lend_form nlf = new new_lend_form();
+            nlf.Visible = true;
 
         }
 

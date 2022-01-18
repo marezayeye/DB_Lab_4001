@@ -33,7 +33,7 @@ namespace OS_Lab_4001
             this.cancel_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.check_button = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -80,15 +80,15 @@ namespace OS_Lab_4001
             this.label2.Text = "کد کتاب";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // check_button
             // 
-            this.button1.Location = new System.Drawing.Point(12, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 45);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "بررسی";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.check_button.Location = new System.Drawing.Point(12, 53);
+            this.check_button.Name = "check_button";
+            this.check_button.Size = new System.Drawing.Size(262, 45);
+            this.check_button.TabIndex = 5;
+            this.check_button.Text = "بررسی";
+            this.check_button.UseVisualStyleBackColor = true;
+            this.check_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -149,13 +149,14 @@ namespace OS_Lab_4001
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.check_button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.append_button);
             this.Name = "new_lend_form";
             this.Text = "ثبت امانت جدید";
+            this.Load += new System.EventHandler(this.new_lend_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,7 +169,7 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button check_button;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
