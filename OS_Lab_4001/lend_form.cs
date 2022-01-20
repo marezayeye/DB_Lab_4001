@@ -41,5 +41,10 @@ namespace OS_Lab_4001
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

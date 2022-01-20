@@ -31,7 +31,7 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "insert into User(User_FirstName,User_LastName,User_Gender,User_Birthday,User_PhoneNumber,User_Address,User_RegisterationDate) values ('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
+            cmd.CommandText = "insert into tblUser values('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("عضویت با موفقیت انجام شد");
