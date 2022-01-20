@@ -29,7 +29,7 @@ namespace OS_Lab_4001
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Visible = false;     //testing gitignore rule
+            this.Visible = false;     
             lend_form s = new lend_form();
             s.Visible = true;
 
