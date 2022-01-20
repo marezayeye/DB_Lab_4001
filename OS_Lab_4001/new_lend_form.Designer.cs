@@ -87,7 +87,7 @@ namespace OS_Lab_4001
             this.check_button.Name = "check_button";
             this.check_button.Size = new System.Drawing.Size(329, 45);
             this.check_button.TabIndex = 5;
-            this.check_button.Text = "بررسی";
+            this.check_button.Text = "بررسی موجودی";
             this.check_button.UseVisualStyleBackColor = true;
             this.check_button.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -126,6 +126,11 @@ namespace OS_Lab_4001
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(12, 423);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(158, 22);
             this.numericUpDown1.TabIndex = 11;
