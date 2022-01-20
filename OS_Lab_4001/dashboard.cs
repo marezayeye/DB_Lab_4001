@@ -47,7 +47,9 @@ namespace OS_Lab_4001
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            user_form uf = new user_form();
+            uf.Visible = true;
         }
     }
 }

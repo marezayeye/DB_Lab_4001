@@ -51,6 +51,7 @@ namespace OS_Lab_4001
             this.append_button.TabIndex = 0;
             this.append_button.Text = "تایید";
             this.append_button.UseVisualStyleBackColor = true;
+            this.append_button.Click += new System.EventHandler(this.append_button_Click);
             // 
             // cancel_button
             // 
