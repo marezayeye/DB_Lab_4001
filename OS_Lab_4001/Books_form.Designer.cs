@@ -349,6 +349,7 @@ namespace OS_Lab_4001
             this.book_name_search.Size = new System.Drawing.Size(158, 22);
             this.book_name_search.TabIndex = 71;
             this.book_name_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.book_name_search.TextChanged += new System.EventHandler(this.book_name_search_TextChanged);
             // 
             // panel
             // 

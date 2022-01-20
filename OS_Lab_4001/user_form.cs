@@ -52,10 +52,22 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "delete from user where User_id ='" + user_id.Text + "'";
-            cmd.ExecuteNonQuery();
+            DialogResult dialog = MessageBox.Show("آیا از حذف این عضو مطمئن هستید؟", "حذف عضویت", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                string bns = user_id.Text;
+                SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tbluser where User_id like '" + bns + "'", con);
+                DataTable dtbl = new DataTable();
+                sqlDA.Fill(dtbl);
+                MessageBox.Show("حذف غضویت با موفقیت انجام شد");
+            }
+            else
+            {
+                MessageBox.Show("حذف غضویت با موفقیت انجام نشد");
+            }
+
             con.Close();
-            MessageBox.Show("حذف غضویت با موفقیت انجام شد");
+            
         }
 
         private void user_id_TextChanged(object sender, EventArgs e)
@@ -84,6 +96,11 @@ namespace OS_Lab_4001
         }
 
         private void user_familyname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

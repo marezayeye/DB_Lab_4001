@@ -213,5 +213,10 @@ namespace OS_Lab_4001
         {
 
         }
+
+        private void book_name_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

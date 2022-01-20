@@ -20,6 +20,7 @@ namespace OS_Lab_4001
 
         public add_new_user_form()
         {
+            //*** connection string ***
             InitializeComponent();
             con = new SqlConnection();
         }
