@@ -19,6 +19,7 @@ namespace OS_Lab_4001
 
         public user_form()
         {
+            //*** connection string ***
             InitializeComponent();
             con = new SqlConnection();
         }
@@ -77,21 +78,23 @@ namespace OS_Lab_4001
 
         private void button2_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection();
-            cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "select * from User where User_id='" + user_id.Text + "' ";
-            SqlDataReader dr = cmd.ExecuteReader();
-            con.Close();
+            string bns = user_id.Text;
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tbluser where User_id like '" + bns + "'", con);
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            user_dataGridView.DataSource = dtbl;
+            con.Close(); ;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection();
-            cmd = new SqlCommand();
             con.Open();
-            cmd.CommandText = "select * from User where User_LastName='" +user_familyname.Text+ "' ";
-            SqlDataReader dr = cmd.ExecuteReader();
+            string bns = user_familyname.Text;
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tbluser where User_LastName like '" + bns + "'", con);
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            user_dataGridView.DataSource = dtbl;
             con.Close();
         }
 
