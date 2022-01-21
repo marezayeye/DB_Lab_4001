@@ -22,7 +22,7 @@ namespace OS_Lab_4001
         {
             //*** connection string ***
             InitializeComponent();
-            con = new SqlConnection();
+            con = new SqlConnection("Data Source=.; Initial Catalog=Library_DB;Integrated Security=True");
         }
 
         private void button1_Click(object sender, EventArgs e)
