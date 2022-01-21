@@ -45,9 +45,9 @@ namespace OS_Lab_4001
             // 
             // append_button
             // 
-            this.append_button.Location = new System.Drawing.Point(12, 479);
+            this.append_button.Location = new System.Drawing.Point(10, 479);
             this.append_button.Name = "append_button";
-            this.append_button.Size = new System.Drawing.Size(122, 47);
+            this.append_button.Size = new System.Drawing.Size(181, 47);
             this.append_button.TabIndex = 0;
             this.append_button.Text = "تایید";
             this.append_button.UseVisualStyleBackColor = true;
@@ -55,7 +55,7 @@ namespace OS_Lab_4001
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(140, 479);
+            this.cancel_button.Location = new System.Drawing.Point(199, 479);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(134, 47);
             this.cancel_button.TabIndex = 1;
@@ -65,16 +65,16 @@ namespace OS_Lab_4001
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(10, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
+            this.textBox1.Size = new System.Drawing.Size(243, 22);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(229, 12);
+            this.label2.Location = new System.Drawing.Point(267, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 4;
@@ -85,15 +85,15 @@ namespace OS_Lab_4001
             // 
             this.check_button.Location = new System.Drawing.Point(12, 53);
             this.check_button.Name = "check_button";
-            this.check_button.Size = new System.Drawing.Size(262, 45);
+            this.check_button.Size = new System.Drawing.Size(329, 45);
             this.check_button.TabIndex = 5;
-            this.check_button.Text = "بررسی";
+            this.check_button.Text = "بررسی موجودی";
             this.check_button.UseVisualStyleBackColor = true;
             this.check_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 114);
+            this.textBox2.Location = new System.Drawing.Point(14, 112);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(177, 22);
             this.textBox2.TabIndex = 6;
@@ -101,7 +101,7 @@ namespace OS_Lab_4001
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 119);
+            this.label1.Location = new System.Drawing.Point(234, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 7;
@@ -117,7 +117,7 @@ namespace OS_Lab_4001
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(204, 154);
+            this.label3.Location = new System.Drawing.Point(242, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 10;
@@ -126,14 +126,19 @@ namespace OS_Lab_4001
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(12, 423);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(158, 22);
             this.numericUpDown1.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 425);
+            this.label4.Location = new System.Drawing.Point(176, 425);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 17);
             this.label4.TabIndex = 12;
@@ -143,7 +148,7 @@ namespace OS_Lab_4001
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 538);
+            this.ClientSize = new System.Drawing.Size(353, 538);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);

@@ -29,7 +29,7 @@ namespace OS_Lab_4001
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Visible = false;     //testing gitignore rule
+            this.Visible = false;     
             lend_form s = new lend_form();
             s.Visible = true;
 
@@ -77,20 +77,23 @@ namespace OS_Lab_4001
 
         private void new_lend_form_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void append_button_Click(object sender, EventArgs e)
         {
-            lend_duration = (int)numericUpDown1.Value;
-            //MessageBox.Show("lend duration is :" +lend_duration);     //debug print
+            //Preparing Values 
+            int lend_duration = Convert.ToInt32(numericUpDown1.Value);
             lend_user_id = Convert.ToInt32(textBox2.Text);
             new_lend_book_id = Convert.ToInt32(textBox1.Text);
             DateTime new_lend_date = monthCalendar1.SelectionStart;
-            //String query = "INSERT INTO tblLend (lLend_id,lUser,lDate,lDaycount,lReturned) VALUES (NULL,@lend_user_id,@new_lend_date, @lend_duration, 0)";
-            //cmd.CommandText = "insert into tblBook values('" + barcode_books.Text + "','" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','" + borrowed_books.Text + "','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";
+            
+            //Reseting Connection
+            new_lend_con.Close();
             new_lend_con.Open();
-            var appendquery = new SqlCommand("INSERT INTO tblLend (lLend_id,lUser,lDate,lDaycount,lReturned) VALUES (NULL,@uid,@date, @duration, 0)");
+            
+            //Query Execution
+            var appendquery = new SqlCommand("INSERT INTO tblLend (lUser,lDate,lDaycount,lReturned) VALUES (@uid,@date, @duration, 0)",new_lend_con);
             //new_lend_cmd.CommandText = "INSERT INTO tblLend (lLend_id,lUser,lDate,lDaycount,lReturned) VALUES (NULL,@lend_user_id,@new_lend_date, @lend_duration, 0)";
             appendquery.Parameters.Add(new SqlParameter("uid", lend_user_id));
             appendquery.Parameters.Add(new SqlParameter("date", new_lend_date));
@@ -98,11 +101,13 @@ namespace OS_Lab_4001
             int append_success = appendquery.ExecuteNonQuery();
             if (append_success > 0)
             {
-                MessageBox.Show("عملیات ناموفق. امانت ثبت نشد");
+                MessageBox.Show("امانت با موفقیت ثبت شد ");
+                
+
             }
             else
             {
-                MessageBox.Show("با موفقیت ثبت شد");
+                MessageBox.Show("ثبت امانت انجام نشد.");
             }
             
 
