@@ -25,7 +25,6 @@ namespace OS_Lab_4001
         
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new_lend_form nlf = new new_lend_form();
             nlf.Visible = true;
 
@@ -33,6 +32,30 @@ namespace OS_Lab_4001
 
         private void button4_Click(object sender, EventArgs e)
         {
+            int return_lend_id = Convert.ToInt32(textBox4.Text);
+            lend_con.Open();
+            var returnquery1 = new SqlCommand("UPDATE tblLend SET lReturned = 1 WHERE lLend_id = @id");
+            returnquery1.Parameters.Add(new SqlParameter("id", return_lend_id));
+
+            var returnquery2 = new SqlCommand("UPDATE tblBook SET bBorrowd = 0 WHERE WHERE lLend_id = @id");
+            returnquery2.Parameters.Add(new SqlParameter("id", return_lend_id));
+
+            int return_success0 = returnquery1.ExecuteNonQuery();
+            int return_success1 = returnquery2.ExecuteNonQuery();
+            if ((return_success0 + return_success1) >= 2)
+            {
+                MessageBox.Show("ثبت بازگشت کتاب با موفقیت انجام شد");
+                lend_dg.Refresh();
+                lend_con.Close();
+
+            }
+            else 
+            {
+                Message.show("ثبت بازگشت انجام نشد");
+                lend_dg.Refresh();
+                lend_con.Close();
+
+            }
 
         }
 
@@ -45,11 +68,15 @@ namespace OS_Lab_4001
 
         private void lend_form_Load(object sender, EventArgs e)
         {
+            //Showing values in DataGrid on Form Load Event
             lend_con.Open();
             SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend", lend_con);
             DataTable lend_dt = new DataTable();
             lend_da.Fill(lend_dt);
             lend_dg.DataSource = lend_dt;
+            lend_dg.Refresh();
+            lend_con.Close();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
