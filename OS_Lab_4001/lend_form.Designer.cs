@@ -29,10 +29,13 @@ namespace OS_Lab_4001
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lend_dg = new System.Windows.Forms.DataGridView();
+            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,7 +46,16 @@ namespace OS_Lab_4001
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lLend_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lBook_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDaycount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lReturned = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.lend_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -54,6 +66,7 @@ namespace OS_Lab_4001
             this.button1.TabIndex = 0;
             this.button1.Text = "جست و جو";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -63,26 +76,46 @@ namespace OS_Lab_4001
             this.button2.TabIndex = 1;
             this.button2.Text = "جست و جو";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(25, 29);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 47);
+            this.button3.Size = new System.Drawing.Size(184, 130);
             this.button3.TabIndex = 2;
             this.button3.Text = "ثبت امانت جدید";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataGridView1
+            // lend_dg
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 195);
-            this.dataGridView1.TabIndex = 3;
+            this.lend_dg.AutoGenerateColumns = false;
+            this.lend_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lend_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lLend_id,
+            this.lBook_id,
+            this.lUser,
+            this.lDate,
+            this.lDaycount,
+            this.lReturned});
+            this.lend_dg.DataSource = this.libraryDBDataSetBindingSource;
+            this.lend_dg.Location = new System.Drawing.Point(25, 196);
+            this.lend_dg.Name = "lend_dg";
+            this.lend_dg.RowHeadersWidth = 51;
+            this.lend_dg.RowTemplate.Height = 24;
+            this.lend_dg.Size = new System.Drawing.Size(738, 195);
+            this.lend_dg.TabIndex = 3;
+            // 
+            // libraryDBDataSetBindingSource
+            // 
+            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
+            this.libraryDBDataSetBindingSource.Position = 0;
+            // 
+            // library_DBDataSet
+            // 
+            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
+            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox1
             // 
@@ -100,7 +133,7 @@ namespace OS_Lab_4001
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(25, 97);
+            this.button4.Location = new System.Drawing.Point(25, 397);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(184, 45);
             this.button4.TabIndex = 6;
@@ -110,9 +143,9 @@ namespace OS_Lab_4001
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(573, 397);
+            this.button5.Location = new System.Drawing.Point(633, 411);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 41);
+            this.button5.Size = new System.Drawing.Size(130, 41);
             this.button5.TabIndex = 7;
             this.button5.Text = "بازگشت به داشبورد";
             this.button5.UseVisualStyleBackColor = true;
@@ -173,11 +206,68 @@ namespace OS_Lab_4001
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(228, 411);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(149, 22);
+            this.textBox4.TabIndex = 14;
+            // 
+            // lLend_id
+            // 
+            this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.lLend_id.DataPropertyName = "lLend_id";
+            this.lLend_id.HeaderText = "کد امانت";
+            this.lLend_id.MinimumWidth = 6;
+            this.lLend_id.Name = "lLend_id";
+            this.lLend_id.Width = 76;
+            // 
+            // lBook_id
+            // 
+            this.lBook_id.DataPropertyName = "lBook_id";
+            this.lBook_id.HeaderText = "کد کتاب";
+            this.lBook_id.MinimumWidth = 6;
+            this.lBook_id.Name = "lBook_id";
+            this.lBook_id.Width = 125;
+            // 
+            // lUser
+            // 
+            this.lUser.DataPropertyName = "lUser";
+            this.lUser.HeaderText = "کد کاربر";
+            this.lUser.MinimumWidth = 6;
+            this.lUser.Name = "lUser";
+            this.lUser.Width = 125;
+            // 
+            // lDate
+            // 
+            this.lDate.DataPropertyName = "lDate";
+            this.lDate.HeaderText = "تاریخ ثبت";
+            this.lDate.MinimumWidth = 6;
+            this.lDate.Name = "lDate";
+            this.lDate.Width = 125;
+            // 
+            // lDaycount
+            // 
+            this.lDaycount.DataPropertyName = "lDaycount";
+            this.lDaycount.HeaderText = "مدت";
+            this.lDaycount.MinimumWidth = 6;
+            this.lDaycount.Name = "lDaycount";
+            this.lDaycount.Width = 125;
+            // 
+            // lReturned
+            // 
+            this.lReturned.DataPropertyName = "lReturned";
+            this.lReturned.HeaderText = "پس داده شده";
+            this.lReturned.MinimumWidth = 6;
+            this.lReturned.Name = "lReturned";
+            this.lReturned.Width = 125;
+            // 
             // lend_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
@@ -188,14 +278,16 @@ namespace OS_Lab_4001
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lend_dg);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "lend_form";
             this.Text = "مدیریت امانات";
             this.Load += new System.EventHandler(this.lend_form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lend_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +298,7 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView lend_dg;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
@@ -217,5 +309,14 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.BindingSource libraryDBDataSetBindingSource;
+        private Library_DBDataSet library_DBDataSet;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lLend_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lBook_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lDaycount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lReturned;
     }
 }
