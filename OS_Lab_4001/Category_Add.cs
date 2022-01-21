@@ -33,7 +33,7 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "insert into tblCategory(Title) values('"+ newCat +"')";
+            cmd.CommandText = "insert into tblCategory(cCaption) values('" + newCat +"')";
             dr = cmd.ExecuteReader();
             MessageBox.Show("دسته بندی جدید ثبت شد");
             con.Close();

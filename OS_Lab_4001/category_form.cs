@@ -33,7 +33,7 @@ namespace OS_Lab_4001
         {
             string SearchedText = textBox2.Text;
 
-            SqlCommand cmd = new SqlCommand("Select * from tblCategory where Title like '%" + SearchedText + "%'", con);
+            SqlCommand cmd = new SqlCommand("Select * from tblCategory where cCaption like '%" + SearchedText + "%'", con);
 
             cmd.CommandType = CommandType.Text;
 
