@@ -45,7 +45,7 @@ namespace OS_Lab_4001
             new_lend_cmd = new SqlCommand();
             new_lend_book_id = int.Parse(textBox1.Text);
             new_lend_con.Open();
-            new_lend_cmd.CommandText = "Select * From tblBook Where bID = '" + new_lend_book_id + "' And bBorrowd > 0";
+            new_lend_cmd.CommandText = "Select * From tblBook Where bID = '" + new_lend_book_id + "' And bBorrowd < 1";
             new_lend_cmd.Connection = new_lend_con;
             
             new_lend_dr = new_lend_cmd.ExecuteReader();
@@ -93,8 +93,9 @@ namespace OS_Lab_4001
             new_lend_con.Open();
             
             //Query Execution
-            var appendquery = new SqlCommand("INSERT INTO tblLend (lUser,lDate,lDaycount,lReturned) VALUES (@uid,@date, @duration, 0)",new_lend_con);
+            var appendquery = new SqlCommand("INSERT INTO tblLend (lBook_id,lUser,lDate,lDaycount,lReturned) VALUES (@book,@uid,@date, @duration, 0)",new_lend_con);
             //new_lend_cmd.CommandText = "INSERT INTO tblLend (lLend_id,lUser,lDate,lDaycount,lReturned) VALUES (NULL,@lend_user_id,@new_lend_date, @lend_duration, 0)";
+            appendquery.Parameters.Add(new SqlParameter("book", new_lend_book_id));
             appendquery.Parameters.Add(new SqlParameter("uid", lend_user_id));
             appendquery.Parameters.Add(new SqlParameter("date", new_lend_date));
             appendquery.Parameters.Add(new SqlParameter("duration", lend_duration));
@@ -102,6 +103,9 @@ namespace OS_Lab_4001
             if (append_success > 0)
             {
                 MessageBox.Show("امانت با موفقیت ثبت شد ");
+                this.Visible = false;
+                lend_form lf = new lend_form();
+                lf.Show();
                 
 
             }
