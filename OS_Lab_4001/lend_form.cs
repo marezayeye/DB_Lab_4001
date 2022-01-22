@@ -51,7 +51,7 @@ namespace OS_Lab_4001
             }
             else 
             {
-                Message.show("ثبت بازگشت انجام نشد");
+                MessageBox.Show("ثبت بازگشت انجام نشد");
                 lend_dg.Refresh();
                 lend_con.Close();
 

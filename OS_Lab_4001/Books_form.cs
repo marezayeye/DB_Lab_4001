@@ -29,7 +29,12 @@ namespace OS_Lab_4001
 
         private void Books_Load(object sender, EventArgs e)
         {
-
+            cont.Open();            
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook", cont);
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            book_dataGridView.DataSource = dtbl;
+            cont.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -70,8 +75,12 @@ namespace OS_Lab_4001
                 cont.Open();
                 cmd.Connection = cont;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update tblBook set bId='" + barcode_books.Text + "',bName='" + book_name_search.Text + "',bAuthor='" + author_books.Text + "',bYear='" + year_books.Text + "',bCategory='" + category_books.Text + "',bTags='" + tags_books.Text + "',bBorrowd='" + borrowed_books.Text + "',bLocation='" + location_books.Text + "',bPublisher='" + publisher_books.Text + "',bTranslator='" + translator_books.Text + "' where bID=" + i + "";
+                cmd.CommandText = "update tblBook set bName='" + book_name_search.Text + "',bAuthor='" + author_books.Text + "',bYear='" + year_books.Text + "',bCategory='" + category_books.Text + "',bTags='" + tags_books.Text + "',bLocation='" + location_books.Text + "',bPublisher='" + publisher_books.Text + "',bTranslator='" + translator_books.Text + "' where bID=" + i + "";
                 cmd.ExecuteNonQuery();
+                SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook", cont);
+                DataTable dtbl = new DataTable();
+                sqlDA.Fill(dtbl);
+                book_dataGridView.DataSource = dtbl;
                 cont.Close();
                 MessageBox.Show("کتاب مورد نظر با موفقیت ویرایش شد");
 
@@ -128,10 +137,15 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             cont.Open();
             cmd.Connection = cont;
-            cmd.CommandText = "insert into tblBook values('" + barcode_books.Text + "','" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','" + borrowed_books.Text + "','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";
+            cmd.CommandText = "insert into tblBook values('','" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','0','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";
             cmd.ExecuteNonQuery();
-            cont.Close();
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook", cont);
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            book_dataGridView.DataSource = dtbl;
+            cont.Close();      
             MessageBox.Show("کتاب مورد نظر با موفقیت ثبت شد");
+            
 
         }
 
@@ -153,6 +167,10 @@ namespace OS_Lab_4001
             {
                 MessageBox.Show("کتاب مورد نظر حذف نشد");
             }
+            SqlDataAdapter sqlDA2 = new SqlDataAdapter("SELECT * FROM tblBook", cont);
+            DataTable dtbl2 = new DataTable();
+            sqlDA2.Fill(dtbl2);
+            book_dataGridView.DataSource = dtbl2;
             cont.Close();            
         }
 
@@ -179,17 +197,15 @@ namespace OS_Lab_4001
 
                 foreach (DataRow dr in dt.Rows)
                 {
-                    book_name_search.Text = dr["bName"].ToString();
-                    barcode_books.Text = dr["bID"].ToString();
+                    book_name_search.Text = dr["bName"].ToString();                    
                     author_books.Text = dr["bAuthor"].ToString();
                     year_books.Text = dr["bYear"].ToString();
                     location_books.Text = dr["bLocation"].ToString();
                     translator_books.Text = dr["bTranslator"].ToString();
                     publisher_books.Text = dr["bPublisher"].ToString();
                     category_books.Text = dr["bCategory"].ToString();
-                    tags_books.Text = dr["bTags"].ToString();
-                    borrowed_books.Text = dr["bBorrowd"].ToString();
-                }
+                    tags_books.Text = dr["bTags"].ToString();                    
+                }                     
                 cont.Close();
             }
             catch(Exception ex)
@@ -215,6 +231,21 @@ namespace OS_Lab_4001
         }
 
         private void book_name_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cont.Open();
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook", cont);
+            DataTable dtbl = new DataTable();
+            sqlDA.Fill(dtbl);
+            book_dataGridView.DataSource = dtbl;
+            cont.Close();
+        }
+
+        private void panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
