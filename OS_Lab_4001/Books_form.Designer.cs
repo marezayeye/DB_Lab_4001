@@ -30,7 +30,6 @@ namespace OS_Lab_4001
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books_form));
             this.remove_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.eddit_button = new System.Windows.Forms.Button();
@@ -45,19 +44,15 @@ namespace OS_Lab_4001
             this.category_books = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.year_books = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.borrowed_books = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.location_books = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.author_books = new System.Windows.Forms.TextBox();
             this.publisher_books = new System.Windows.Forms.TextBox();
             this.translator_books = new System.Windows.Forms.TextBox();
-            this.barcode_books = new System.Windows.Forms.TextBox();
             this.book_name_search = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,6 +69,7 @@ namespace OS_Lab_4001
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
             this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -172,7 +168,7 @@ namespace OS_Lab_4001
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Location = new System.Drawing.Point(181, 79);
+            this.label11.Location = new System.Drawing.Point(414, 127);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 90;
@@ -180,7 +176,7 @@ namespace OS_Lab_4001
             // 
             // tags_books
             // 
-            this.tags_books.Location = new System.Drawing.Point(12, 79);
+            this.tags_books.Location = new System.Drawing.Point(245, 127);
             this.tags_books.Name = "tags_books";
             this.tags_books.Size = new System.Drawing.Size(158, 22);
             this.tags_books.TabIndex = 89;
@@ -190,7 +186,7 @@ namespace OS_Lab_4001
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label10.Location = new System.Drawing.Point(181, 51);
+            this.label10.Location = new System.Drawing.Point(509, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 17);
             this.label10.TabIndex = 88;
@@ -198,7 +194,7 @@ namespace OS_Lab_4001
             // 
             // category_books
             // 
-            this.category_books.Location = new System.Drawing.Point(12, 51);
+            this.category_books.Location = new System.Drawing.Point(340, 83);
             this.category_books.Name = "category_books";
             this.category_books.Size = new System.Drawing.Size(158, 22);
             this.category_books.TabIndex = 87;
@@ -208,7 +204,7 @@ namespace OS_Lab_4001
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.Location = new System.Drawing.Point(645, 113);
+            this.label12.Location = new System.Drawing.Point(509, 58);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 17);
             this.label12.TabIndex = 86;
@@ -216,35 +212,17 @@ namespace OS_Lab_4001
             // 
             // year_books
             // 
-            this.year_books.Location = new System.Drawing.Point(476, 110);
+            this.year_books.Location = new System.Drawing.Point(340, 55);
             this.year_books.Name = "year_books";
             this.year_books.Size = new System.Drawing.Size(158, 22);
             this.year_books.TabIndex = 85;
             this.year_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label13.Location = new System.Drawing.Point(181, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 17);
-            this.label13.TabIndex = 84;
-            this.label13.Text = "موجودی";
-            // 
-            // borrowed_books
-            // 
-            this.borrowed_books.Location = new System.Drawing.Point(12, 107);
-            this.borrowed_books.Name = "borrowed_books";
-            this.borrowed_books.Size = new System.Drawing.Size(158, 22);
-            this.borrowed_books.TabIndex = 83;
-            this.borrowed_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label14.Location = new System.Drawing.Point(427, 54);
+            this.label14.Location = new System.Drawing.Point(298, 27);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 17);
             this.label14.TabIndex = 82;
@@ -252,7 +230,7 @@ namespace OS_Lab_4001
             // 
             // location_books
             // 
-            this.location_books.Location = new System.Drawing.Point(258, 54);
+            this.location_books.Location = new System.Drawing.Point(129, 27);
             this.location_books.Name = "location_books";
             this.location_books.Size = new System.Drawing.Size(158, 22);
             this.location_books.TabIndex = 81;
@@ -263,7 +241,7 @@ namespace OS_Lab_4001
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label15.Location = new System.Drawing.Point(427, 107);
+            this.label15.Location = new System.Drawing.Point(298, 80);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 17);
             this.label15.TabIndex = 80;
@@ -273,27 +251,17 @@ namespace OS_Lab_4001
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label16.Location = new System.Drawing.Point(427, 82);
+            this.label16.Location = new System.Drawing.Point(298, 55);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 17);
             this.label16.TabIndex = 79;
             this.label16.Text = "مترجم";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label17.Location = new System.Drawing.Point(645, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 17);
-            this.label17.TabIndex = 78;
-            this.label17.Text = "بارکد";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label18.Location = new System.Drawing.Point(645, 85);
+            this.label18.Location = new System.Drawing.Point(509, 30);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(40, 17);
             this.label18.TabIndex = 77;
@@ -311,7 +279,7 @@ namespace OS_Lab_4001
             // 
             // author_books
             // 
-            this.author_books.Location = new System.Drawing.Point(476, 82);
+            this.author_books.Location = new System.Drawing.Point(340, 27);
             this.author_books.Name = "author_books";
             this.author_books.Size = new System.Drawing.Size(158, 22);
             this.author_books.TabIndex = 75;
@@ -320,7 +288,7 @@ namespace OS_Lab_4001
             // 
             // publisher_books
             // 
-            this.publisher_books.Location = new System.Drawing.Point(258, 110);
+            this.publisher_books.Location = new System.Drawing.Point(129, 83);
             this.publisher_books.Name = "publisher_books";
             this.publisher_books.Size = new System.Drawing.Size(158, 22);
             this.publisher_books.TabIndex = 74;
@@ -328,19 +296,11 @@ namespace OS_Lab_4001
             // 
             // translator_books
             // 
-            this.translator_books.Location = new System.Drawing.Point(258, 82);
+            this.translator_books.Location = new System.Drawing.Point(129, 55);
             this.translator_books.Name = "translator_books";
             this.translator_books.Size = new System.Drawing.Size(158, 22);
             this.translator_books.TabIndex = 73;
             this.translator_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // barcode_books
-            // 
-            this.barcode_books.Location = new System.Drawing.Point(476, 54);
-            this.barcode_books.Name = "barcode_books";
-            this.barcode_books.Size = new System.Drawing.Size(158, 22);
-            this.barcode_books.TabIndex = 72;
-            this.barcode_books.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // book_name_search
             // 
@@ -353,10 +313,7 @@ namespace OS_Lab_4001
             // 
             // panel
             // 
-            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.Controls.Add(this.borrowed_books);
             this.panel.Controls.Add(this.label11);
-            this.panel.Controls.Add(this.barcode_books);
             this.panel.Controls.Add(this.tags_books);
             this.panel.Controls.Add(this.translator_books);
             this.panel.Controls.Add(this.label10);
@@ -366,8 +323,6 @@ namespace OS_Lab_4001
             this.panel.Controls.Add(this.label12);
             this.panel.Controls.Add(this.label18);
             this.panel.Controls.Add(this.year_books);
-            this.panel.Controls.Add(this.label17);
-            this.panel.Controls.Add(this.label13);
             this.panel.Controls.Add(this.label16);
             this.panel.Controls.Add(this.label15);
             this.panel.Controls.Add(this.label14);
@@ -376,6 +331,7 @@ namespace OS_Lab_4001
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(703, 191);
             this.panel.TabIndex = 91;
+            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // label1
             // 
@@ -516,13 +472,24 @@ namespace OS_Lab_4001
             this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
             this.libraryDBDataSetBindingSource.Position = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(52, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "تازه";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Books_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1319, 530);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.book_dataGridView);
             this.Controls.Add(this.panel);
@@ -566,19 +533,15 @@ namespace OS_Lab_4001
         private System.Windows.Forms.TextBox category_books;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox year_books;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox borrowed_books;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox location_books;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox author_books;
         private System.Windows.Forms.TextBox publisher_books;
         private System.Windows.Forms.TextBox translator_books;
-        private System.Windows.Forms.TextBox barcode_books;
         private System.Windows.Forms.TextBox book_name_search;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView book_dataGridView;
@@ -595,5 +558,6 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridViewTextBoxColumn tags;
         private System.Windows.Forms.DataGridViewTextBoxColumn brrowed;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
