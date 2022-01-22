@@ -38,5 +38,15 @@ namespace OS_Lab_4001
             MessageBox.Show("دسته بندی جدید ثبت شد");
             con.Close();
         }
+
+        private void Category_Add_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace OS_Lab_4001
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(category_form));
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -43,7 +44,8 @@ namespace OS_Lab_4001
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(542, 121);
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(542, 50);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
@@ -54,7 +56,8 @@ namespace OS_Lab_4001
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(407, 79);
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(391, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -78,7 +81,7 @@ namespace OS_Lab_4001
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 118);
+            this.textBox2.Location = new System.Drawing.Point(317, 47);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 20);
@@ -86,19 +89,21 @@ namespace OS_Lab_4001
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 193);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(270, 103);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(554, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(289, 225);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button3.ForeColor = System.Drawing.Color.DarkOrchid;
             this.button3.Location = new System.Drawing.Point(651, 11);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
@@ -111,7 +116,7 @@ namespace OS_Lab_4001
             // 
             // searchbtn
             // 
-            this.searchbtn.Location = new System.Drawing.Point(317, 142);
+            this.searchbtn.Location = new System.Drawing.Point(317, 71);
             this.searchbtn.Margin = new System.Windows.Forms.Padding(2);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(85, 28);
@@ -124,14 +129,17 @@ namespace OS_Lab_4001
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(795, 339);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "category_form";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.category_form_Load);
