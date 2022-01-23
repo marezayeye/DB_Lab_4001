@@ -39,6 +39,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.user_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Users_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regesterdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.user_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,13 +148,86 @@
             // user_dataGridView
             // 
             this.user_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.user_dataGridView.Location = new System.Drawing.Point(12, 27);
+            this.user_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Users_Id,
+            this.fname,
+            this.lname,
+            this.gender,
+            this.birthdate,
+            this.phonenumber,
+            this.adress,
+            this.regesterdate});
+            this.user_dataGridView.Location = new System.Drawing.Point(28, 27);
             this.user_dataGridView.Name = "user_dataGridView";
             this.user_dataGridView.RowHeadersWidth = 51;
             this.user_dataGridView.RowTemplate.Height = 24;
             this.user_dataGridView.Size = new System.Drawing.Size(872, 398);
             this.user_dataGridView.TabIndex = 27;
             this.user_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Users_Id
+            // 
+            this.Users_Id.DataPropertyName = "User_id";
+            this.Users_Id.HeaderText = "کد عضویت";
+            this.Users_Id.MinimumWidth = 6;
+            this.Users_Id.Name = "Users_Id";
+            this.Users_Id.Width = 125;
+            // 
+            // fname
+            // 
+            this.fname.DataPropertyName = "User_FirstName";
+            this.fname.HeaderText = "نام";
+            this.fname.MinimumWidth = 6;
+            this.fname.Name = "fname";
+            this.fname.Width = 125;
+            // 
+            // lname
+            // 
+            this.lname.DataPropertyName = "User_LastName";
+            this.lname.HeaderText = "نام خانوادگی";
+            this.lname.MinimumWidth = 6;
+            this.lname.Name = "lname";
+            this.lname.Width = 125;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "User_Gender";
+            this.gender.HeaderText = "جنسیت";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.Width = 125;
+            // 
+            // birthdate
+            // 
+            this.birthdate.DataPropertyName = "User_Birthday";
+            this.birthdate.HeaderText = "تاریخ تولد";
+            this.birthdate.MinimumWidth = 6;
+            this.birthdate.Name = "birthdate";
+            this.birthdate.Width = 125;
+            // 
+            // phonenumber
+            // 
+            this.phonenumber.DataPropertyName = "User_PhoneNumber";
+            this.phonenumber.HeaderText = "شماره تلفن";
+            this.phonenumber.MinimumWidth = 6;
+            this.phonenumber.Name = "phonenumber";
+            this.phonenumber.Width = 125;
+            // 
+            // adress
+            // 
+            this.adress.DataPropertyName = "User_Address";
+            this.adress.HeaderText = "آدرس";
+            this.adress.MinimumWidth = 6;
+            this.adress.Name = "adress";
+            this.adress.Width = 125;
+            // 
+            // regesterdate
+            // 
+            this.regesterdate.DataPropertyName = "User_RegisterationDate";
+            this.regesterdate.HeaderText = "تاریخ عضویت";
+            this.regesterdate.MinimumWidth = 6;
+            this.regesterdate.Name = "regesterdate";
+            this.regesterdate.Width = 125;
             // 
             // user_form
             // 
@@ -185,5 +266,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView user_dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Users_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regesterdate;
     }
 }

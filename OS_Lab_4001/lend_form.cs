@@ -115,5 +115,10 @@ namespace OS_Lab_4001
             lend_con.Close();
 
         }
+
+        private void lend_dg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
