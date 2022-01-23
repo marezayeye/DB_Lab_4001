@@ -137,7 +137,6 @@ namespace OS_Lab_4001
             cmd = new SqlCommand();
             cont.Open();
             cmd.Connection = cont;
-            /*cmd.CommandText = "insert into tblBook values('','" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','0','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";*/
             cmd.CommandText = "INSERT INTO tblBook (bName , bAuthor, bYear , bCategory , bTags , bBorrowd , bLocation , bPublisher , bTranslator) VALUES ('" + book_name_search.Text + "','" + author_books.Text + "','" + year_books.Text + "','" + category_books.Text + "','" + tags_books.Text + "','0','" + location_books.Text + "','" + publisher_books.Text + "','" + translator_books.Text + "')";
             cmd.ExecuteNonQuery();
             SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblBook", cont);
