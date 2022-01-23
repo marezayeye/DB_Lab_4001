@@ -30,6 +30,7 @@ namespace OS_Lab_4001
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books_form));
             this.remove_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.eddit_button = new System.Windows.Forms.Button();
@@ -313,6 +314,7 @@ namespace OS_Lab_4001
             // 
             // panel
             // 
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
             this.panel.Controls.Add(this.label11);
             this.panel.Controls.Add(this.tags_books);
             this.panel.Controls.Add(this.translator_books);
@@ -488,6 +490,7 @@ namespace OS_Lab_4001
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1319, 530);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
