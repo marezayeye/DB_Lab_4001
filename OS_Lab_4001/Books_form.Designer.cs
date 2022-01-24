@@ -351,6 +351,7 @@ namespace OS_Lab_4001
             this.book_dataGridView.AllowUserToAddRows = false;
             this.book_dataGridView.AllowUserToDeleteRows = false;
             this.book_dataGridView.AutoGenerateColumns = false;
+            this.book_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.book_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.book_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.books_name_data,
@@ -367,7 +368,8 @@ namespace OS_Lab_4001
             this.book_dataGridView.Location = new System.Drawing.Point(174, 33);
             this.book_dataGridView.Name = "book_dataGridView";
             this.book_dataGridView.ReadOnly = true;
-            this.book_dataGridView.RowHeadersWidth = 51;
+            this.book_dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.book_dataGridView.RowHeadersWidth = 25;
             this.book_dataGridView.RowTemplate.Height = 24;
             this.book_dataGridView.Size = new System.Drawing.Size(1052, 298);
             this.book_dataGridView.TabIndex = 92;
@@ -381,7 +383,6 @@ namespace OS_Lab_4001
             this.books_name_data.MinimumWidth = 6;
             this.books_name_data.Name = "books_name_data";
             this.books_name_data.ReadOnly = true;
-            this.books_name_data.Width = 125;
             // 
             // barcode
             // 
@@ -390,7 +391,6 @@ namespace OS_Lab_4001
             this.barcode.MinimumWidth = 6;
             this.barcode.Name = "barcode";
             this.barcode.ReadOnly = true;
-            this.barcode.Width = 125;
             // 
             // Athour
             // 
@@ -399,7 +399,6 @@ namespace OS_Lab_4001
             this.Athour.MinimumWidth = 6;
             this.Athour.Name = "Athour";
             this.Athour.ReadOnly = true;
-            this.Athour.Width = 125;
             // 
             // year
             // 
@@ -408,7 +407,6 @@ namespace OS_Lab_4001
             this.year.MinimumWidth = 6;
             this.year.Name = "year";
             this.year.ReadOnly = true;
-            this.year.Width = 125;
             // 
             // location
             // 
@@ -417,7 +415,6 @@ namespace OS_Lab_4001
             this.location.MinimumWidth = 6;
             this.location.Name = "location";
             this.location.ReadOnly = true;
-            this.location.Width = 125;
             // 
             // translator
             // 
@@ -426,7 +423,6 @@ namespace OS_Lab_4001
             this.translator.MinimumWidth = 6;
             this.translator.Name = "translator";
             this.translator.ReadOnly = true;
-            this.translator.Width = 125;
             // 
             // publisher
             // 
@@ -435,7 +431,6 @@ namespace OS_Lab_4001
             this.publisher.MinimumWidth = 6;
             this.publisher.Name = "publisher";
             this.publisher.ReadOnly = true;
-            this.publisher.Width = 125;
             // 
             // category
             // 
@@ -444,7 +439,6 @@ namespace OS_Lab_4001
             this.category.MinimumWidth = 6;
             this.category.Name = "category";
             this.category.ReadOnly = true;
-            this.category.Width = 125;
             // 
             // tags
             // 
@@ -453,7 +447,6 @@ namespace OS_Lab_4001
             this.tags.MinimumWidth = 6;
             this.tags.Name = "tags";
             this.tags.ReadOnly = true;
-            this.tags.Width = 125;
             // 
             // brrowed
             // 
@@ -462,7 +455,6 @@ namespace OS_Lab_4001
             this.brrowed.MinimumWidth = 6;
             this.brrowed.Name = "brrowed";
             this.brrowed.ReadOnly = true;
-            this.brrowed.Width = 125;
             // 
             // library_DBDataSet
             // 
