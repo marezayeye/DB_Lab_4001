@@ -85,10 +85,11 @@ namespace OS_Lab_4001
         {
             con.Open();
             string bns = user_id.Text;
-            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tbluser where User_id like '" + bns + "'", con);
+            SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tbluser where uId like '" + bns + "'", con);
             DataTable dtbl = new DataTable();
             sqlDA.Fill(dtbl);
             user_dataGridView.DataSource = dtbl;
+            user_dataGridView.Refresh();
             con.Close(); ;
         }
 
