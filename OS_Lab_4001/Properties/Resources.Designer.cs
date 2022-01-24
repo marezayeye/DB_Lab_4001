@@ -59,5 +59,15 @@ namespace OS_Lab_4001.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch {
+            get {
+                object obj = ResourceManager.GetObject("_39_Create-a-Login-Form-in-Adobe-Photoshop-From-Scratch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

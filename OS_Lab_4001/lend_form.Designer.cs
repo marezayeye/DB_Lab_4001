@@ -80,17 +80,20 @@ namespace OS_Lab_4001
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button3.Location = new System.Drawing.Point(25, 29);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(184, 130);
             this.button3.TabIndex = 2;
             this.button3.Text = "ثبت امانت جدید";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lend_dg
             // 
             this.lend_dg.AutoGenerateColumns = false;
+            this.lend_dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.lend_dg.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lend_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lend_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lLend_id,
@@ -100,8 +103,10 @@ namespace OS_Lab_4001
             this.lDaycount,
             this.lReturned});
             this.lend_dg.DataSource = this.libraryDBDataSetBindingSource;
+            this.lend_dg.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lend_dg.Location = new System.Drawing.Point(25, 196);
             this.lend_dg.Name = "lend_dg";
+            this.lend_dg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lend_dg.RowHeadersWidth = 51;
             this.lend_dg.RowTemplate.Height = 24;
             this.lend_dg.Size = new System.Drawing.Size(738, 195);
@@ -123,7 +128,6 @@ namespace OS_Lab_4001
             this.lBook_id.HeaderText = "کد کتاب";
             this.lBook_id.MinimumWidth = 6;
             this.lBook_id.Name = "lBook_id";
-            this.lBook_id.Width = 125;
             // 
             // lUser
             // 
@@ -131,7 +135,6 @@ namespace OS_Lab_4001
             this.lUser.HeaderText = "کد کاربر";
             this.lUser.MinimumWidth = 6;
             this.lUser.Name = "lUser";
-            this.lUser.Width = 125;
             // 
             // lDate
             // 
@@ -139,7 +142,6 @@ namespace OS_Lab_4001
             this.lDate.HeaderText = "تاریخ ثبت";
             this.lDate.MinimumWidth = 6;
             this.lDate.Name = "lDate";
-            this.lDate.Width = 125;
             // 
             // lDaycount
             // 
@@ -147,7 +149,6 @@ namespace OS_Lab_4001
             this.lDaycount.HeaderText = "مدت";
             this.lDaycount.MinimumWidth = 6;
             this.lDaycount.Name = "lDaycount";
-            this.lDaycount.Width = 125;
             // 
             // lReturned
             // 
@@ -155,7 +156,6 @@ namespace OS_Lab_4001
             this.lReturned.HeaderText = "پس داده شده";
             this.lReturned.MinimumWidth = 6;
             this.lReturned.Name = "lReturned";
-            this.lReturned.Width = 125;
             // 
             // libraryDBDataSetBindingSource
             // 
@@ -267,6 +267,7 @@ namespace OS_Lab_4001
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 465);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);
