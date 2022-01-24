@@ -51,6 +51,13 @@ namespace OS_Lab_4001
             if (new_lend_dr.Read())
                 {
                 MessageBox.Show("کتاب موجود است ، می توانید ادامه دهید");
+                append_button.Visible = true;
+                textBox2.Visible = true;
+                label1.Visible = true;
+                label3.Visible = true;
+                monthCalendar1.Visible = true;
+                label4.Visible = true;
+                numericUpDown1.Visible = true;
                 new_lend_con.Close();
             }
             else
@@ -75,11 +82,19 @@ namespace OS_Lab_4001
 
         private void new_lend_form_Load(object sender, EventArgs e)
         {
-        
+            append_button.Visible = false;
+            textBox2.Visible = false;
+            label1.Visible = false;
+            label3.Visible = false;
+            monthCalendar1.Visible = false;
+            label4.Visible = false;
+            numericUpDown1.Visible = false;
         }
 
         private void append_button_Click(object sender, EventArgs e)
         {
+            
+            
             //Preparing Values 
             int lend_duration = Convert.ToInt32(numericUpDown1.Value);
             lend_user_id = Convert.ToInt32(textBox2.Text);
