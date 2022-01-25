@@ -126,6 +126,9 @@ namespace OS_Lab_4001
             last_name = row1["uLastname"].ToString();
             nlc_name = first_name + " " + last_name;
 
+            //preparing values
+
+
             
 
 
