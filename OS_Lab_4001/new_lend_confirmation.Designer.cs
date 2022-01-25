@@ -33,12 +33,10 @@ namespace OS_Lab_4001
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -46,7 +44,7 @@ namespace OS_Lab_4001
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 320);
+            this.button1.Location = new System.Drawing.Point(12, 232);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 49);
             this.button1.TabIndex = 0;
@@ -57,7 +55,7 @@ namespace OS_Lab_4001
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(180, 320);
+            this.button2.Location = new System.Drawing.Point(180, 232);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 49);
             this.button2.TabIndex = 1;
@@ -68,17 +66,15 @@ namespace OS_Lab_4001
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox1.Size = new System.Drawing.Size(306, 193);
+            this.groupBox1.Size = new System.Drawing.Size(306, 157);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مشخصات";
@@ -86,20 +82,11 @@ namespace OS_Lab_4001
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 148);
+            this.label9.Location = new System.Drawing.Point(60, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 23);
             this.label9.TabIndex = 7;
             this.label9.Text = "label9";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(60, 109);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 23);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "label8";
             // 
             // label7
             // 
@@ -123,7 +110,7 @@ namespace OS_Lab_4001
             // 
             this.label5.AutoSize = true;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(207, 147);
+            this.label5.Location = new System.Drawing.Point(207, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 23);
             this.label5.TabIndex = 3;
@@ -134,23 +121,12 @@ namespace OS_Lab_4001
             // 
             this.label4.AutoSize = true;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(198, 109);
+            this.label4.Location = new System.Drawing.Point(168, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 23);
+            this.label4.Size = new System.Drawing.Size(110, 23);
             this.label4.TabIndex = 2;
-            this.label4.Text = "نام خانوادگی";
+            this.label4.Text = "نام و نام خانوادگی";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(252, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "نام";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -166,7 +142,7 @@ namespace OS_Lab_4001
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 280);
+            this.label1.Location = new System.Drawing.Point(115, 192);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(207, 23);
@@ -180,7 +156,7 @@ namespace OS_Lab_4001
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(330, 381);
+            this.ClientSize = new System.Drawing.Size(330, 307);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -205,12 +181,10 @@ namespace OS_Lab_4001
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
     }
 }

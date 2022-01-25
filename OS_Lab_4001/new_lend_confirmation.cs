@@ -19,10 +19,9 @@ namespace OS_Lab_4001
 
         private void new_lend_confirmation_Load(object sender, EventArgs e)
         {
-            label6.Text = "book name";
-            label7.Text = "firstname";
-            label8.Text = "lastname";
-            label9.Text = new_lend_form.nl_duration;
+            label6.Text =  new_lend_form.nl_book_name;
+            label7.Text =  new_lend_form.nlc_name;
+            label9.Text = Convert.ToString(new_lend_form.nl_duration);
         }
 
         private void button1_Click(object sender, EventArgs e)

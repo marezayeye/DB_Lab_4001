@@ -17,9 +17,14 @@ namespace OS_Lab_4001
         private SqlConnection new_lend_con;
         SqlCommand new_lend_cmd;
         SqlDataReader new_lend_dr;
-        public int nl_book_id;
-        public int nl_duration;
-        public int nl_user_id;
+        public static int nl_book_id;
+        public static int nl_duration;
+        public static int nl_user_id;
+        public static string nl_book_name;
+        string first_name;
+        string last_name;
+        public static string nlc_name;
+
 
         public new_lend_form()
         {
@@ -93,8 +98,52 @@ namespace OS_Lab_4001
 
         private void append_button_Click(object sender, EventArgs e)
         {
-            //getting duration
+            //Setting duration
             nl_duration = Convert.ToInt32(numericUpDown1.Value);
+
+            //Setting date
+            DateTime nl_date = monthCalendar1.SelectionStart;
+
+            //Setting book id
+            nl_book_id = Convert.ToInt32(textBox1.Text);
+
+            //finding bookname
+            new_lend_con.Open();
+            SqlDataAdapter new_lend_da = new SqlDataAdapter("Select bName From tblBook Where bID = '" + nl_book_id + "'", new_lend_con);
+            DataTable new_lend_dt = new DataTable();
+            new_lend_da.Fill(new_lend_dt);
+            DataRow row = new_lend_dt.Rows[0];
+            nl_book_id = Convert.ToInt32(row["bBook"].ToString());
+            new_lend_con.Close();
+
+            //finding firstname & lastname
+            new_lend_con.Open();
+            SqlDataAdapter new_lend_da1 = new SqlDataAdapter("Select uFirstname,uLastname From tblUser Where uId = '" + nl_user_id + "'", new_lend_con);
+            DataTable new_lend_dt1 = new DataTable();
+            new_lend_da1.Fill(new_lend_dt1);
+            DataRow row1 = new_lend_dt1.Rows[0];
+            first_name = row1["uFirstname"].ToString();
+            last_name = row1["uLastname"].ToString();
+            nlc_name = first_name + " " + last_name;
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
