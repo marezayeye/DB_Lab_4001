@@ -58,6 +58,9 @@ namespace OS_Lab_4001
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.book_dataGridView = new System.Windows.Forms.DataGridView();
+            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
+            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.books_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Athour = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,9 +71,6 @@ namespace OS_Lab_4001
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tags = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
-            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -376,6 +376,27 @@ namespace OS_Lab_4001
             this.book_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.book_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // library_DBDataSet
+            // 
+            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
+            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libraryDBDataSetBindingSource
+            // 
+            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
+            this.libraryDBDataSetBindingSource.Position = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(52, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "تازه";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // books_name_data
             // 
             this.books_name_data.DataPropertyName = "bName";
@@ -451,31 +472,10 @@ namespace OS_Lab_4001
             // brrowed
             // 
             this.brrowed.DataPropertyName = "bBorrowd";
-            this.brrowed.HeaderText = "موجودی";
+            this.brrowed.HeaderText = "امانت داده شده";
             this.brrowed.MinimumWidth = 6;
             this.brrowed.Name = "brrowed";
             this.brrowed.ReadOnly = true;
-            // 
-            // library_DBDataSet
-            // 
-            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
-            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libraryDBDataSetBindingSource
-            // 
-            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
-            this.libraryDBDataSetBindingSource.Position = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(52, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "تازه";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Books_form
             // 
@@ -542,6 +542,8 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridView book_dataGridView;
         private System.Windows.Forms.BindingSource libraryDBDataSetBindingSource;
         private Library_DBDataSet library_DBDataSet;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn books_name_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn barcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Athour;
@@ -552,7 +554,5 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn tags;
         private System.Windows.Forms.DataGridViewTextBoxColumn brrowed;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }
