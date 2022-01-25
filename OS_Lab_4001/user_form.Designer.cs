@@ -52,7 +52,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button6.Location = new System.Drawing.Point(919, 384);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(190, 41);
@@ -92,6 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(1102, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
@@ -109,6 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(1105, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
@@ -118,6 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(1123, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 17);
@@ -136,7 +139,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button1.Location = new System.Drawing.Point(939, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 47);
@@ -159,6 +162,7 @@
             this.regesterdate});
             this.user_dataGridView.Location = new System.Drawing.Point(28, 27);
             this.user_dataGridView.Name = "user_dataGridView";
+            this.user_dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.user_dataGridView.RowHeadersWidth = 51;
             this.user_dataGridView.RowTemplate.Height = 24;
             this.user_dataGridView.Size = new System.Drawing.Size(872, 398);
@@ -233,6 +237,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1185, 449);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
