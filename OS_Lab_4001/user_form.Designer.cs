@@ -47,6 +47,9 @@
             this.phonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regesterdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteuserbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.user_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +143,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Location = new System.Drawing.Point(939, 251);
+            this.button1.Location = new System.Drawing.Point(939, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 47);
             this.button1.TabIndex = 28;
@@ -233,6 +236,34 @@
             this.regesterdate.Name = "regesterdate";
             this.regesterdate.Width = 125;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(1107, 269);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "کد عضویت ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // deleteuserbox
+            // 
+            this.deleteuserbox.Location = new System.Drawing.Point(906, 282);
+            this.deleteuserbox.Name = "deleteuserbox";
+            this.deleteuserbox.Size = new System.Drawing.Size(190, 22);
+            this.deleteuserbox.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(1106, 297);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "برای حذف";
+            // 
             // user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,6 +272,9 @@
             this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1185, 449);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.deleteuserbox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -281,5 +315,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn adress;
         private System.Windows.Forms.DataGridViewTextBoxColumn regesterdate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox deleteuserbox;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -61,7 +61,7 @@ namespace OS_Lab_4001
             DialogResult dialog = MessageBox.Show("آیا از حذف این عضو مطمئن هستید؟", "حذف عضویت", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialog == DialogResult.Yes)
             {
-                string bns = user_id.Text;
+                string bns = deleteuserbox.Text;
                 SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tbluser where User_id like '" + bns + "'", con);
                 DataTable dtbl = new DataTable();
                 sqlDA.Fill(dtbl);
@@ -69,7 +69,7 @@ namespace OS_Lab_4001
             }
             else
             {
-                MessageBox.Show("حذف غضویت با موفقیت انجام نشد");
+                MessageBox.Show("حذف غضویت انجام نشد");
             }
 
             con.Close();
@@ -110,6 +110,11 @@ namespace OS_Lab_4001
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
