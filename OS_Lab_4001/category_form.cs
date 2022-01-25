@@ -66,7 +66,7 @@ namespace OS_Lab_4001
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            
+
             this.Visible = false;
             Category_Add d = new Category_Add();
             d.Visible = true;
@@ -85,11 +85,52 @@ namespace OS_Lab_4001
 
             da.Fill(ds, "Category");
 
-            dataGridView1.DataSource = ds.Tables["Category"]; 
+            dataGridView1.DataSource = ds.Tables["Category"];
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        private void EditDataBtn(object sender, EventArgs e)
+        {
+
+            int id= Int16.Parse(EditLblId.Text);
+            string newtext =textBox2.Text;
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "update tblCategory set cCaption='" + newtext + "' where cID=" + id + "";
+            dr = cmd.ExecuteReader();
+            MessageBox.Show("دسته بندی تغییر یافت");
+            con.Close();
+        }
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            try
+            {
+                cmd = new SqlCommand();
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM tblCategory WHERE cID=" + i + "";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    EditLblId.Text = dr["cID"].ToString();
+                    textBox2.Text = dr["cCaption"].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

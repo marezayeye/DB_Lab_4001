@@ -38,6 +38,8 @@ namespace OS_Lab_4001
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.searchbtn = new System.Windows.Forms.Button();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.EditLblId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +101,7 @@ namespace OS_Lab_4001
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(289, 225);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
@@ -125,6 +128,26 @@ namespace OS_Lab_4001
             this.searchbtn.UseVisualStyleBackColor = true;
             this.searchbtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
+            // EditBtn
+            // 
+            this.EditBtn.Location = new System.Drawing.Point(406, 71);
+            this.EditBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(85, 28);
+            this.EditBtn.TabIndex = 25;
+            this.EditBtn.Text = "ادیت";
+            this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditDataBtn);
+            // 
+            // EditLblId
+            // 
+            this.EditLblId.Location = new System.Drawing.Point(513, 76);
+            this.EditLblId.Margin = new System.Windows.Forms.Padding(2);
+            this.EditLblId.Name = "EditLblId";
+            this.EditLblId.Size = new System.Drawing.Size(10, 20);
+            this.EditLblId.TabIndex = 26;
+            this.EditLblId.Visible = false;
+            // 
             // category_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +155,8 @@ namespace OS_Lab_4001
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(795, 339);
+            this.Controls.Add(this.EditLblId);
+            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.searchbtn);
             this.Controls.Add(this.label3);
@@ -157,5 +182,7 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button searchbtn;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.TextBox EditLblId;
     }
 }
