@@ -80,17 +80,20 @@ namespace OS_Lab_4001
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button3.Location = new System.Drawing.Point(25, 29);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 130);
+            this.button3.Size = new System.Drawing.Size(184, 72);
             this.button3.TabIndex = 2;
             this.button3.Text = "ثبت امانت جدید";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lend_dg
             // 
             this.lend_dg.AutoGenerateColumns = false;
+            this.lend_dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.lend_dg.BackgroundColor = System.Drawing.Color.MintCream;
             this.lend_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lend_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lLend_id,
@@ -100,12 +103,15 @@ namespace OS_Lab_4001
             this.lDaycount,
             this.lReturned});
             this.lend_dg.DataSource = this.libraryDBDataSetBindingSource;
+            this.lend_dg.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lend_dg.Location = new System.Drawing.Point(25, 196);
             this.lend_dg.Name = "lend_dg";
+            this.lend_dg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lend_dg.RowHeadersWidth = 51;
             this.lend_dg.RowTemplate.Height = 24;
             this.lend_dg.Size = new System.Drawing.Size(738, 195);
             this.lend_dg.TabIndex = 3;
+            this.lend_dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lend_dg_CellContentClick);
             // 
             // libraryDBDataSetBindingSource
             // 
@@ -119,6 +125,7 @@ namespace OS_Lab_4001
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.MintCream;
             this.textBox1.Location = new System.Drawing.Point(528, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 22);
@@ -126,6 +133,7 @@ namespace OS_Lab_4001
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.MintCream;
             this.textBox2.Location = new System.Drawing.Point(528, 88);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 22);
@@ -133,7 +141,7 @@ namespace OS_Lab_4001
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(25, 397);
+            this.button4.Location = new System.Drawing.Point(25, 107);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(184, 45);
             this.button4.TabIndex = 6;
@@ -154,6 +162,7 @@ namespace OS_Lab_4001
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(700, 9);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -165,6 +174,7 @@ namespace OS_Lab_4001
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(691, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
@@ -174,6 +184,7 @@ namespace OS_Lab_4001
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(709, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 17);
@@ -183,6 +194,7 @@ namespace OS_Lab_4001
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(692, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 17);
@@ -191,6 +203,7 @@ namespace OS_Lab_4001
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.MintCream;
             this.textBox3.Location = new System.Drawing.Point(528, 135);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(148, 22);
@@ -208,7 +221,8 @@ namespace OS_Lab_4001
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(228, 411);
+            this.textBox4.BackColor = System.Drawing.Color.MintCream;
+            this.textBox4.Location = new System.Drawing.Point(215, 127);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(149, 22);
             this.textBox4.TabIndex = 14;
@@ -216,7 +230,7 @@ namespace OS_Lab_4001
             // lLend_id
             // 
             this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.lLend_id.DataPropertyName = "lLend_id";
+            this.lLend_id.DataPropertyName = "lId";
             this.lLend_id.HeaderText = "کد امانت";
             this.lLend_id.MinimumWidth = 6;
             this.lLend_id.Name = "lLend_id";
@@ -224,11 +238,10 @@ namespace OS_Lab_4001
             // 
             // lBook_id
             // 
-            this.lBook_id.DataPropertyName = "lBook_id";
+            this.lBook_id.DataPropertyName = "lBook";
             this.lBook_id.HeaderText = "کد کتاب";
             this.lBook_id.MinimumWidth = 6;
             this.lBook_id.Name = "lBook_id";
-            this.lBook_id.Width = 125;
             // 
             // lUser
             // 
@@ -236,7 +249,6 @@ namespace OS_Lab_4001
             this.lUser.HeaderText = "کد کاربر";
             this.lUser.MinimumWidth = 6;
             this.lUser.Name = "lUser";
-            this.lUser.Width = 125;
             // 
             // lDate
             // 
@@ -244,7 +256,6 @@ namespace OS_Lab_4001
             this.lDate.HeaderText = "تاریخ ثبت";
             this.lDate.MinimumWidth = 6;
             this.lDate.Name = "lDate";
-            this.lDate.Width = 125;
             // 
             // lDaycount
             // 
@@ -252,7 +263,6 @@ namespace OS_Lab_4001
             this.lDaycount.HeaderText = "مدت";
             this.lDaycount.MinimumWidth = 6;
             this.lDaycount.Name = "lDaycount";
-            this.lDaycount.Width = 125;
             // 
             // lReturned
             // 
@@ -260,12 +270,14 @@ namespace OS_Lab_4001
             this.lReturned.HeaderText = "پس داده شده";
             this.lReturned.MinimumWidth = 6;
             this.lReturned.Name = "lReturned";
-            this.lReturned.Width = 125;
             // 
             // lend_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 465);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);

@@ -30,6 +30,7 @@ namespace OS_Lab_4001
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books_form));
             this.remove_button = new System.Windows.Forms.Button();
             this.add_button = new System.Windows.Forms.Button();
             this.eddit_button = new System.Windows.Forms.Button();
@@ -57,6 +58,9 @@ namespace OS_Lab_4001
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.book_dataGridView = new System.Windows.Forms.DataGridView();
+            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
+            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.books_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Athour = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,9 +71,6 @@ namespace OS_Lab_4001
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tags = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
-            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -313,6 +314,7 @@ namespace OS_Lab_4001
             // 
             // panel
             // 
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
             this.panel.Controls.Add(this.label11);
             this.panel.Controls.Add(this.tags_books);
             this.panel.Controls.Add(this.translator_books);
@@ -349,6 +351,7 @@ namespace OS_Lab_4001
             this.book_dataGridView.AllowUserToAddRows = false;
             this.book_dataGridView.AllowUserToDeleteRows = false;
             this.book_dataGridView.AutoGenerateColumns = false;
+            this.book_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.book_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.book_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.books_name_data,
@@ -365,102 +368,13 @@ namespace OS_Lab_4001
             this.book_dataGridView.Location = new System.Drawing.Point(174, 33);
             this.book_dataGridView.Name = "book_dataGridView";
             this.book_dataGridView.ReadOnly = true;
-            this.book_dataGridView.RowHeadersWidth = 51;
+            this.book_dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.book_dataGridView.RowHeadersWidth = 25;
             this.book_dataGridView.RowTemplate.Height = 24;
             this.book_dataGridView.Size = new System.Drawing.Size(1052, 298);
             this.book_dataGridView.TabIndex = 92;
             this.book_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.book_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // books_name_data
-            // 
-            this.books_name_data.DataPropertyName = "bName";
-            this.books_name_data.HeaderText = "نام کتاب";
-            this.books_name_data.MinimumWidth = 6;
-            this.books_name_data.Name = "books_name_data";
-            this.books_name_data.ReadOnly = true;
-            this.books_name_data.Width = 125;
-            // 
-            // barcode
-            // 
-            this.barcode.DataPropertyName = "bID";
-            this.barcode.HeaderText = "بارکد";
-            this.barcode.MinimumWidth = 6;
-            this.barcode.Name = "barcode";
-            this.barcode.ReadOnly = true;
-            this.barcode.Width = 125;
-            // 
-            // Athour
-            // 
-            this.Athour.DataPropertyName = "bAuthor";
-            this.Athour.HeaderText = "نویسنده";
-            this.Athour.MinimumWidth = 6;
-            this.Athour.Name = "Athour";
-            this.Athour.ReadOnly = true;
-            this.Athour.Width = 125;
-            // 
-            // year
-            // 
-            this.year.DataPropertyName = "bYear";
-            this.year.HeaderText = "سال چاپ";
-            this.year.MinimumWidth = 6;
-            this.year.Name = "year";
-            this.year.ReadOnly = true;
-            this.year.Width = 125;
-            // 
-            // location
-            // 
-            this.location.DataPropertyName = "bLocation";
-            this.location.HeaderText = "مکان";
-            this.location.MinimumWidth = 6;
-            this.location.Name = "location";
-            this.location.ReadOnly = true;
-            this.location.Width = 125;
-            // 
-            // translator
-            // 
-            this.translator.DataPropertyName = "bTranslator";
-            this.translator.HeaderText = "مترجم";
-            this.translator.MinimumWidth = 6;
-            this.translator.Name = "translator";
-            this.translator.ReadOnly = true;
-            this.translator.Width = 125;
-            // 
-            // publisher
-            // 
-            this.publisher.DataPropertyName = "bPublisher";
-            this.publisher.HeaderText = "ناشر";
-            this.publisher.MinimumWidth = 6;
-            this.publisher.Name = "publisher";
-            this.publisher.ReadOnly = true;
-            this.publisher.Width = 125;
-            // 
-            // category
-            // 
-            this.category.DataPropertyName = "bCategory";
-            this.category.HeaderText = "دسته بندی";
-            this.category.MinimumWidth = 6;
-            this.category.Name = "category";
-            this.category.ReadOnly = true;
-            this.category.Width = 125;
-            // 
-            // tags
-            // 
-            this.tags.DataPropertyName = "bTags";
-            this.tags.HeaderText = "برچسب";
-            this.tags.MinimumWidth = 6;
-            this.tags.Name = "tags";
-            this.tags.ReadOnly = true;
-            this.tags.Width = 125;
-            // 
-            // brrowed
-            // 
-            this.brrowed.DataPropertyName = "bBorrowd";
-            this.brrowed.HeaderText = "موجودی";
-            this.brrowed.MinimumWidth = 6;
-            this.brrowed.Name = "brrowed";
-            this.brrowed.ReadOnly = true;
-            this.brrowed.Width = 125;
             // 
             // library_DBDataSet
             // 
@@ -483,11 +397,92 @@ namespace OS_Lab_4001
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // books_name_data
+            // 
+            this.books_name_data.DataPropertyName = "bName";
+            this.books_name_data.HeaderText = "نام کتاب";
+            this.books_name_data.MinimumWidth = 6;
+            this.books_name_data.Name = "books_name_data";
+            this.books_name_data.ReadOnly = true;
+            // 
+            // barcode
+            // 
+            this.barcode.DataPropertyName = "bID";
+            this.barcode.HeaderText = "بارکد";
+            this.barcode.MinimumWidth = 6;
+            this.barcode.Name = "barcode";
+            this.barcode.ReadOnly = true;
+            // 
+            // Athour
+            // 
+            this.Athour.DataPropertyName = "bAuthor";
+            this.Athour.HeaderText = "نویسنده";
+            this.Athour.MinimumWidth = 6;
+            this.Athour.Name = "Athour";
+            this.Athour.ReadOnly = true;
+            // 
+            // year
+            // 
+            this.year.DataPropertyName = "bYear";
+            this.year.HeaderText = "سال چاپ";
+            this.year.MinimumWidth = 6;
+            this.year.Name = "year";
+            this.year.ReadOnly = true;
+            // 
+            // location
+            // 
+            this.location.DataPropertyName = "bLocation";
+            this.location.HeaderText = "مکان";
+            this.location.MinimumWidth = 6;
+            this.location.Name = "location";
+            this.location.ReadOnly = true;
+            // 
+            // translator
+            // 
+            this.translator.DataPropertyName = "bTranslator";
+            this.translator.HeaderText = "مترجم";
+            this.translator.MinimumWidth = 6;
+            this.translator.Name = "translator";
+            this.translator.ReadOnly = true;
+            // 
+            // publisher
+            // 
+            this.publisher.DataPropertyName = "bPublisher";
+            this.publisher.HeaderText = "ناشر";
+            this.publisher.MinimumWidth = 6;
+            this.publisher.Name = "publisher";
+            this.publisher.ReadOnly = true;
+            // 
+            // category
+            // 
+            this.category.DataPropertyName = "bCategory";
+            this.category.HeaderText = "دسته بندی";
+            this.category.MinimumWidth = 6;
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            // 
+            // tags
+            // 
+            this.tags.DataPropertyName = "bTags";
+            this.tags.HeaderText = "برچسب";
+            this.tags.MinimumWidth = 6;
+            this.tags.Name = "tags";
+            this.tags.ReadOnly = true;
+            // 
+            // brrowed
+            // 
+            this.brrowed.DataPropertyName = "bBorrowd";
+            this.brrowed.HeaderText = "امانت داده شده";
+            this.brrowed.MinimumWidth = 6;
+            this.brrowed.Name = "brrowed";
+            this.brrowed.ReadOnly = true;
+            // 
             // Books_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1319, 530);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -547,6 +542,8 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridView book_dataGridView;
         private System.Windows.Forms.BindingSource libraryDBDataSetBindingSource;
         private Library_DBDataSet library_DBDataSet;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn books_name_data;
         private System.Windows.Forms.DataGridViewTextBoxColumn barcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Athour;
@@ -557,7 +554,5 @@ namespace OS_Lab_4001
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn tags;
         private System.Windows.Forms.DataGridViewTextBoxColumn brrowed;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
     }
 }

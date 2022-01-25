@@ -51,5 +51,10 @@ namespace OS_Lab_4001
             user_form uf = new user_form();
             uf.Visible = true;
         }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString();
+        }
     }
 }

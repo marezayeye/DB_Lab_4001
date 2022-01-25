@@ -11,6 +11,22 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\marezayeye\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +49,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3BAB5F5C4A03E9DB9C6EC26CC66C410D13B26193</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DB_Lab_4001_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -78,6 +106,12 @@
     <Compile Include="Books_form.Designer.cs">
       <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_lend_confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_lend_confirmation.Designer.cs">
+      <DependentUpon>new_lend_confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="new_lend_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +140,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="user_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +166,9 @@
     <EmbeddedResource Include="Books_form.resx">
       <DependentUpon>Books_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new_lend_confirmation.resx">
+      <DependentUpon>new_lend_confirmation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="new_lend_form.resx">
       <DependentUpon>new_lend_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +188,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DB_Lab_4001_TemporaryKey.pfx" />
     <None Include="Library_DBDataSet.xsc">
       <DependentUpon>Library_DBDataSet.xsd</DependentUpon>
     </None>
@@ -172,6 +219,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_39_Create-a-Login-Form-in-Adobe-Photoshop-From-Scratch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
