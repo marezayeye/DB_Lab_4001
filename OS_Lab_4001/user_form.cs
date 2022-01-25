@@ -26,6 +26,7 @@ namespace OS_Lab_4001
 
         private void user_form_Load(object sender, EventArgs e)
         {
+            user_dataGridView.AutoGenerateColumns = false;
             con.Open();
             SqlDataAdapter sqlDA = new SqlDataAdapter("Select * from tblUser", con);
             DataTable dtbl = new DataTable();
