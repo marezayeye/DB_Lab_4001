@@ -95,13 +95,13 @@ namespace OS_Lab_4001
         {
             //getting duration
             nl_duration = Convert.ToInt32(numericUpDown1.Value);
-            public int nlc_duration { get { return nl_duration; } }
+        }
+
+
+
     }
+
+
+}               
             
-
-        //getting date
-        
-
-                }
-            }
         
