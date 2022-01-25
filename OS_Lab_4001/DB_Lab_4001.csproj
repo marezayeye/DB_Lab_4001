@@ -106,6 +106,12 @@
     <Compile Include="Books_form.Designer.cs">
       <DependentUpon>Books_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_lend_confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_lend_confirmation.Designer.cs">
+      <DependentUpon>new_lend_confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="new_lend_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books_form.resx">
       <DependentUpon>Books_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_lend_confirmation.resx">
+      <DependentUpon>new_lend_confirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new_lend_form.resx">
       <DependentUpon>new_lend_form.cs</DependentUpon>
