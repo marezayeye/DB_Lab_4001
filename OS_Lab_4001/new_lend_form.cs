@@ -24,6 +24,7 @@ namespace OS_Lab_4001
         string first_name;
         string last_name;
         public static string nlc_name;
+        public static DateTime nl_date;
 
 
         public new_lend_form()
@@ -98,11 +99,14 @@ namespace OS_Lab_4001
 
         private void append_button_Click(object sender, EventArgs e)
         {
+            //setting uid
+            nl_user_id = int.Parse(textBox2.Text);
+            
             //Setting duration
             nl_duration = Convert.ToInt32(numericUpDown1.Value);
 
             //Setting date
-            DateTime nl_date = monthCalendar1.SelectionStart;
+            nl_date = monthCalendar1.SelectionStart;
 
             //Setting book id
             nl_book_id = Convert.ToInt32(textBox1.Text);
@@ -113,7 +117,7 @@ namespace OS_Lab_4001
             DataTable new_lend_dt = new DataTable();
             new_lend_da.Fill(new_lend_dt);
             DataRow row = new_lend_dt.Rows[0];
-            nl_book_id = Convert.ToInt32(row["bBook"].ToString());
+            nl_book_name = row["bName"].ToString();
             new_lend_con.Close();
 
             //finding firstname & lastname
@@ -126,27 +130,13 @@ namespace OS_Lab_4001
             last_name = row1["uLastname"].ToString();
             nlc_name = first_name + " " + last_name;
 
-            //preparing values
-
-
             
 
+            new_lend_confirmation nlcf = new new_lend_confirmation();
+            nlcf.Visible = true;
+            this.Hide();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
         }
 
 

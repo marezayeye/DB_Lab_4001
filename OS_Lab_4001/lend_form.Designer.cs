@@ -34,12 +34,6 @@ namespace OS_Lab_4001
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lend_dg = new System.Windows.Forms.DataGridView();
-            this.lLend_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lBook_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lDaycount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lReturned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -53,6 +47,12 @@ namespace OS_Lab_4001
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lLend_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lBook_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDaycount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lReturned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lend_dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -112,50 +112,6 @@ namespace OS_Lab_4001
             this.lend_dg.Size = new System.Drawing.Size(738, 195);
             this.lend_dg.TabIndex = 3;
             this.lend_dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lend_dg_CellContentClick);
-            // 
-            // lLend_id
-            // 
-            this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.lLend_id.DataPropertyName = "lLend_id";
-            this.lLend_id.HeaderText = "کد امانت";
-            this.lLend_id.MinimumWidth = 6;
-            this.lLend_id.Name = "lLend_id";
-            this.lLend_id.Width = 76;
-            // 
-            // lBook_id
-            // 
-            this.lBook_id.DataPropertyName = "lBook_id";
-            this.lBook_id.HeaderText = "کد کتاب";
-            this.lBook_id.MinimumWidth = 6;
-            this.lBook_id.Name = "lBook_id";
-            // 
-            // lUser
-            // 
-            this.lUser.DataPropertyName = "lUser";
-            this.lUser.HeaderText = "کد کاربر";
-            this.lUser.MinimumWidth = 6;
-            this.lUser.Name = "lUser";
-            // 
-            // lDate
-            // 
-            this.lDate.DataPropertyName = "lDate";
-            this.lDate.HeaderText = "تاریخ ثبت";
-            this.lDate.MinimumWidth = 6;
-            this.lDate.Name = "lDate";
-            // 
-            // lDaycount
-            // 
-            this.lDaycount.DataPropertyName = "lDaycount";
-            this.lDaycount.HeaderText = "مدت";
-            this.lDaycount.MinimumWidth = 6;
-            this.lDaycount.Name = "lDaycount";
-            // 
-            // lReturned
-            // 
-            this.lReturned.DataPropertyName = "lReturned";
-            this.lReturned.HeaderText = "پس داده شده";
-            this.lReturned.MinimumWidth = 6;
-            this.lReturned.Name = "lReturned";
             // 
             // libraryDBDataSetBindingSource
             // 
@@ -270,6 +226,50 @@ namespace OS_Lab_4001
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(149, 22);
             this.textBox4.TabIndex = 14;
+            // 
+            // lLend_id
+            // 
+            this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.lLend_id.DataPropertyName = "lId";
+            this.lLend_id.HeaderText = "کد امانت";
+            this.lLend_id.MinimumWidth = 6;
+            this.lLend_id.Name = "lLend_id";
+            this.lLend_id.Width = 76;
+            // 
+            // lBook_id
+            // 
+            this.lBook_id.DataPropertyName = "lBook";
+            this.lBook_id.HeaderText = "کد کتاب";
+            this.lBook_id.MinimumWidth = 6;
+            this.lBook_id.Name = "lBook_id";
+            // 
+            // lUser
+            // 
+            this.lUser.DataPropertyName = "lUser";
+            this.lUser.HeaderText = "کد کاربر";
+            this.lUser.MinimumWidth = 6;
+            this.lUser.Name = "lUser";
+            // 
+            // lDate
+            // 
+            this.lDate.DataPropertyName = "lDate";
+            this.lDate.HeaderText = "تاریخ ثبت";
+            this.lDate.MinimumWidth = 6;
+            this.lDate.Name = "lDate";
+            // 
+            // lDaycount
+            // 
+            this.lDaycount.DataPropertyName = "lDaycount";
+            this.lDaycount.HeaderText = "مدت";
+            this.lDaycount.MinimumWidth = 6;
+            this.lDaycount.Name = "lDaycount";
+            // 
+            // lReturned
+            // 
+            this.lReturned.DataPropertyName = "lReturned";
+            this.lReturned.HeaderText = "پس داده شده";
+            this.lReturned.MinimumWidth = 6;
+            this.lReturned.Name = "lReturned";
             // 
             // lend_form
             // 
