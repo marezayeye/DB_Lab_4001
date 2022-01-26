@@ -129,7 +129,32 @@ namespace OS_Lab_4001
 
         private void lend_dg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int lend_id = Convert.ToInt32(lend_dg.SelectedCells[0].Value.ToString());
+            try
+            {
+                lend_cmd = new SqlCommand();
+                lend_con.Open();
+                lend_cmd.Connection = lend_con;
+                lend_cmd.CommandType = CommandType.Text;
+                lend_cmd.CommandText = "SELECT * FROM tblLend WHERE lId =" + lend_id + "";
+                lend_cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(lend_cmd);
+                da.Fill(dt);
 
+                foreach (DataRow dr in dt.Rows)
+                {
+
+                    textBox1.Text = dr["lId"].ToString();
+                    textBox2.Text = dr["lBook"].ToString();
+                    textBox3.Text = dr["lUser"].ToString();
+                }
+                lend_con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void lend_dg_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -150,9 +175,8 @@ namespace OS_Lab_4001
                 foreach (DataRow dr in dt.Rows)
                 {
                     
-                   
-                    textBox1.Text = dr["lId"].ToString();
-                    textBox2.Text = dr["lBook"].ToString();
+                    textBox1.Text = dr["lLend_id"].ToString();
+                    textBox2.Text = dr["lBook_id"].ToString();
                     textBox3.Text = dr["lUser"].ToString();
                 }
                 lend_con.Close();
@@ -160,6 +184,17 @@ namespace OS_Lab_4001
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void lend_dg_SelectionChanged(object sender, EventArgs e)
+        {
+            if (lend_dg.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = lend_dg.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = lend_dg.Rows[selectedrowindex];
+                textBox1.Text = Convert.ToString(selectedRow.Cells["lLend_id"].Value);
+                textBox2.Text = Convert.ToString(selectedRow.Cells["lBook_id"].Value);
+                textBox3.Text = Convert.ToString(selectedRow.Cells["lUser"].Value);
             }
         }
     }
