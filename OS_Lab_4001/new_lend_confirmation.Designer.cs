@@ -44,27 +44,33 @@ namespace OS_Lab_4001
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Location = new System.Drawing.Point(12, 232);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 49);
             this.button1.TabIndex = 0;
             this.button1.Text = "بله";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button2.Location = new System.Drawing.Point(180, 232);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 49);
             this.button2.TabIndex = 1;
             this.button2.Text = "انصراف";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -110,7 +116,7 @@ namespace OS_Lab_4001
             // 
             this.label5.AutoSize = true;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(207, 113);
+            this.label5.Location = new System.Drawing.Point(194, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 23);
             this.label5.TabIndex = 3;
@@ -121,7 +127,7 @@ namespace OS_Lab_4001
             // 
             this.label4.AutoSize = true;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(168, 76);
+            this.label4.Location = new System.Drawing.Point(155, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 23);
             this.label4.TabIndex = 2;
@@ -132,7 +138,7 @@ namespace OS_Lab_4001
             // 
             this.label2.AutoSize = true;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(220, 41);
+            this.label2.Location = new System.Drawing.Point(207, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 0;
@@ -142,6 +148,7 @@ namespace OS_Lab_4001
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(115, 192);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -155,6 +162,7 @@ namespace OS_Lab_4001
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(330, 307);
             this.Controls.Add(this.label1);
