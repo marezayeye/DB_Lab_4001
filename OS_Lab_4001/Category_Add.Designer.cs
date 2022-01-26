@@ -34,7 +34,6 @@ namespace OS_Lab_4001
             this.label3 = new System.Windows.Forms.Label();
             this.AddCategoryLBl = new System.Windows.Forms.TextBox();
             this.addCategoryBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backToCategory
@@ -44,7 +43,7 @@ namespace OS_Lab_4001
             this.backToCategory.Name = "backToCategory";
             this.backToCategory.Size = new System.Drawing.Size(120, 28);
             this.backToCategory.TabIndex = 25;
-            this.backToCategory.Text = "بازشگت به لیست";
+            this.backToCategory.Text = "بازگشت به لیست";
             this.backToCategory.UseVisualStyleBackColor = true;
             this.backToCategory.Click += new System.EventHandler(this.backToCategoryEvent);
             // 
@@ -70,7 +69,7 @@ namespace OS_Lab_4001
             // 
             this.addCategoryBtn.BackColor = System.Drawing.SystemColors.InfoText;
             this.addCategoryBtn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.addCategoryBtn.Location = new System.Drawing.Point(410, 85);
+            this.addCategoryBtn.Location = new System.Drawing.Point(470, 65);
             this.addCategoryBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addCategoryBtn.Name = "addCategoryBtn";
             this.addCategoryBtn.Size = new System.Drawing.Size(90, 39);
@@ -79,26 +78,12 @@ namespace OS_Lab_4001
             this.addCategoryBtn.UseVisualStyleBackColor = false;
             this.addCategoryBtn.Click += new System.EventHandler(this.addCategoryEvent);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(556, 85);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 39);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "حذف";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Category_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(744, 356);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddCategoryLBl);
             this.Controls.Add(this.addCategoryBtn);
@@ -117,6 +102,5 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox AddCategoryLBl;
         private System.Windows.Forms.Button addCategoryBtn;
-        private System.Windows.Forms.Button button1;
     }
 }
