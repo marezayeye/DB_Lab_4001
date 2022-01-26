@@ -15,14 +15,14 @@ namespace OS_Lab_4001
     {
         SqlConnection lend_con = new SqlConnection("Data Source=.;Initial Catalog=Library_DB;Integrated Security=True");
         SqlCommand lend_cmd;
-        SqlDataReader lend_dr;
+        
         public lend_form()
         {
-            InitializeComponent();         
+            InitializeComponent();
         }
 
-        
-        
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             new_lend_form nlf = new new_lend_form();
@@ -32,36 +32,47 @@ namespace OS_Lab_4001
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int return_lend_id = Convert.ToInt32(textBox4.Text);
-            lend_con.Open();
-            var returnquery1 = new SqlCommand("UPDATE tblLend SET lReturned = 1 WHERE lLend_id = @id");
-            returnquery1.Parameters.Add(new SqlParameter("id", return_lend_id));
-
-            var returnquery2 = new SqlCommand("UPDATE tblBook SET bBorrowd = 0 WHERE WHERE lLend_id = @id");
-            returnquery2.Parameters.Add(new SqlParameter("id", return_lend_id));
-
-            int return_success0 = returnquery1.ExecuteNonQuery();
-            int return_success1 = returnquery2.ExecuteNonQuery();
-            if ((return_success0 + return_success1) >= 2)
+            DialogResult dialog = MessageBox.Show("آیا از ثبت بازگشت مطمئن هستید؟","ثبت بازگشت امانت", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
             {
-                MessageBox.Show("ثبت بازگشت کتاب با موفقیت انجام شد");
-                lend_dg.Refresh();
-                lend_con.Close();
+                int return_lend_id = Convert.ToInt32(textBox1.Text);
+                int return_book_id = Convert.ToInt32(textBox2.Text);
+                int return_user_id = Convert.ToInt32(textBox3.Text);
 
+                using (var return_con = new SqlConnection("Data Source=.;Initial Catalog=Library_DB;Integrated Security=True"))
+                {
+                    return_con.Open();
+
+                    using (var command = return_con.CreateCommand())
+                    {
+                        command.CommandText = "UPDATE  tblLend SET lReturned = 1 WHERE lId = @lid;";
+                        command.Parameters.Add(new SqlParameter("lid", return_lend_id));
+                        command.ExecuteNonQuery();
+
+                        command.CommandText = "UPDATE tblUser SET uBorrowedcount = uBorrowedcount + -1 WHERE uId = @uid;";
+                        command.Parameters.Add(new SqlParameter("uid", return_user_id));
+                        command.ExecuteNonQuery();
+
+                        command.CommandText = "UPDATE tblBook SET bBorrowd = 0 WHERE bID = @bid;";
+                        command.Parameters.Add(new SqlParameter("bid", return_book_id));
+                        command.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("بازگشت کتاب با موفقیت ثبت شد");
+                lend_dg.Refresh();
             }
-            else 
+            else
             {
-                MessageBox.Show("ثبت بازگشت انجام نشد");
-                lend_dg.Refresh();
-                lend_con.Close();
-
+                MessageBox.Show("عملیات به درخواست کاربر لغو شد");
             }
+            
+            
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;     
+            this.Visible = false;
             dashboard d = new dashboard();
             d.Visible = true;
         }
@@ -83,7 +94,7 @@ namespace OS_Lab_4001
         {
             int lend_search_field3 = Convert.ToInt32(textBox3.Text);
             lend_con.Open();
-            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lUser = ' " + lend_search_field3 + " ' ",lend_con);
+            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lUser = ' " + lend_search_field3 + " ' ", lend_con);
             DataTable lend_dt = new DataTable();
             lend_da.Fill(lend_dt);
             lend_dg.DataSource = lend_dt;
@@ -96,19 +107,19 @@ namespace OS_Lab_4001
         {
             int lend_search_field1 = Convert.ToInt32(textBox1.Text);
             lend_con.Open();
-            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lLend_id = ' " + lend_search_field1 + " ' ",lend_con);
+            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lLend_id = ' " + lend_search_field1 + " ' ", lend_con);
             DataTable lend_dt = new DataTable();
             lend_da.Fill(lend_dt);
             lend_dg.DataSource = lend_dt;
             lend_con.Close();
-                        
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int lend_search_field2 = Convert.ToInt32(textBox2.Text);
             lend_con.Open();
-            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lBook_id = ' " + lend_search_field2 + " ' ",lend_con);
+            SqlDataAdapter lend_da = new SqlDataAdapter("SELECT * FROM tblLend WHERE lBook_id = ' " + lend_search_field2 + " ' ", lend_con);
             DataTable lend_dt = new DataTable();
             lend_da.Fill(lend_dt);
             lend_dg.DataSource = lend_dt;
@@ -119,6 +130,37 @@ namespace OS_Lab_4001
         private void lend_dg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void lend_dg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int lend_id = Convert.ToInt32(lend_dg.SelectedCells[0].Value.ToString());
+            try
+            {
+                lend_cmd = new SqlCommand();
+                lend_con.Open();
+                lend_cmd.Connection = lend_con;
+                lend_cmd.CommandType = CommandType.Text;
+                lend_cmd.CommandText = "SELECT * FROM tblLend WHERE lId =" + lend_id + "";
+                lend_cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(lend_cmd);
+                da.Fill(dt);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    
+                   
+                    textBox1.Text = dr["lId"].ToString();
+                    textBox2.Text = dr["lBook"].ToString();
+                    textBox3.Text = dr["lUser"].ToString();
+                }
+                lend_con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -34,6 +34,12 @@ namespace OS_Lab_4001
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lend_dg = new System.Windows.Forms.DataGridView();
+            this.lLend_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lBook_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lDaycount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lReturned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,13 +52,6 @@ namespace OS_Lab_4001
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lLend_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lBook_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lDaycount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lReturned = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lend_dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -60,27 +59,32 @@ namespace OS_Lab_4001
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Location = new System.Drawing.Point(409, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 35);
             this.button1.TabIndex = 0;
             this.button1.Text = "جست و جو";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button2.Location = new System.Drawing.Point(408, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "جست و جو";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button3.Location = new System.Drawing.Point(25, 29);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(184, 72);
@@ -113,6 +117,50 @@ namespace OS_Lab_4001
             this.lend_dg.TabIndex = 3;
             this.lend_dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lend_dg_CellContentClick);
             // 
+            // lLend_id
+            // 
+            this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.lLend_id.DataPropertyName = "lId";
+            this.lLend_id.HeaderText = "کد امانت";
+            this.lLend_id.MinimumWidth = 6;
+            this.lLend_id.Name = "lLend_id";
+            this.lLend_id.Width = 76;
+            // 
+            // lBook_id
+            // 
+            this.lBook_id.DataPropertyName = "lBook";
+            this.lBook_id.HeaderText = "کد کتاب";
+            this.lBook_id.MinimumWidth = 6;
+            this.lBook_id.Name = "lBook_id";
+            // 
+            // lUser
+            // 
+            this.lUser.DataPropertyName = "lUser";
+            this.lUser.HeaderText = "کد کاربر";
+            this.lUser.MinimumWidth = 6;
+            this.lUser.Name = "lUser";
+            // 
+            // lDate
+            // 
+            this.lDate.DataPropertyName = "lDate";
+            this.lDate.HeaderText = "تاریخ ثبت";
+            this.lDate.MinimumWidth = 6;
+            this.lDate.Name = "lDate";
+            // 
+            // lDaycount
+            // 
+            this.lDaycount.DataPropertyName = "lDaycount";
+            this.lDaycount.HeaderText = "مدت";
+            this.lDaycount.MinimumWidth = 6;
+            this.lDaycount.Name = "lDaycount";
+            // 
+            // lReturned
+            // 
+            this.lReturned.DataPropertyName = "lReturned";
+            this.lReturned.HeaderText = "پس داده شده";
+            this.lReturned.MinimumWidth = 6;
+            this.lReturned.Name = "lReturned";
+            // 
             // libraryDBDataSetBindingSource
             // 
             this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
@@ -141,22 +189,26 @@ namespace OS_Lab_4001
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.CadetBlue;
+            this.button4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button4.Location = new System.Drawing.Point(25, 107);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(184, 45);
             this.button4.TabIndex = 6;
             this.button4.Text = "ثبت بازگشت کتاب";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(633, 411);
+            this.button5.BackColor = System.Drawing.Color.IndianRed;
+            this.button5.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.Location = new System.Drawing.Point(528, 411);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 41);
+            this.button5.Size = new System.Drawing.Size(235, 41);
             this.button5.TabIndex = 7;
             this.button5.Text = "بازگشت به داشبورد";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
@@ -211,65 +263,15 @@ namespace OS_Lab_4001
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.CadetBlue;
+            this.button6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button6.Location = new System.Drawing.Point(409, 127);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 32);
             this.button6.TabIndex = 13;
             this.button6.Text = "جست و جو";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.MintCream;
-            this.textBox4.Location = new System.Drawing.Point(215, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 22);
-            this.textBox4.TabIndex = 14;
-            // 
-            // lLend_id
-            // 
-            this.lLend_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.lLend_id.DataPropertyName = "lId";
-            this.lLend_id.HeaderText = "کد امانت";
-            this.lLend_id.MinimumWidth = 6;
-            this.lLend_id.Name = "lLend_id";
-            this.lLend_id.Width = 76;
-            // 
-            // lBook_id
-            // 
-            this.lBook_id.DataPropertyName = "lBook";
-            this.lBook_id.HeaderText = "کد کتاب";
-            this.lBook_id.MinimumWidth = 6;
-            this.lBook_id.Name = "lBook_id";
-            // 
-            // lUser
-            // 
-            this.lUser.DataPropertyName = "lUser";
-            this.lUser.HeaderText = "کد کاربر";
-            this.lUser.MinimumWidth = 6;
-            this.lUser.Name = "lUser";
-            // 
-            // lDate
-            // 
-            this.lDate.DataPropertyName = "lDate";
-            this.lDate.HeaderText = "تاریخ ثبت";
-            this.lDate.MinimumWidth = 6;
-            this.lDate.Name = "lDate";
-            // 
-            // lDaycount
-            // 
-            this.lDaycount.DataPropertyName = "lDaycount";
-            this.lDaycount.HeaderText = "مدت";
-            this.lDaycount.MinimumWidth = 6;
-            this.lDaycount.Name = "lDaycount";
-            // 
-            // lReturned
-            // 
-            this.lReturned.DataPropertyName = "lReturned";
-            this.lReturned.HeaderText = "پس داده شده";
-            this.lReturned.MinimumWidth = 6;
-            this.lReturned.Name = "lReturned";
             // 
             // lend_form
             // 
@@ -279,7 +281,6 @@ namespace OS_Lab_4001
             this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 465);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
@@ -323,7 +324,6 @@ namespace OS_Lab_4001
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.BindingSource libraryDBDataSetBindingSource;
         private Library_DBDataSet library_DBDataSet;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn lLend_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn lBook_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn lUser;
