@@ -27,14 +27,18 @@ namespace OS_Lab_4001
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+            DateTime user_bd = dateTimePicker1.Value.Date;
+            DateTime user_reg_date = dateTimePicker2.Value.Date;
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "insert into tblUser values('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + birthday.Text + "','" + phonenumber.Text + "','" + address.Text + "','"+registerdate.Text+"')";
+            cmd.CommandText = "INSERT INTO tblUser (uFirstname, uLastname, uGender, uBirthday, uPhonenumber, uAddress, uRegisteratiodate, uBorrowedcount) VALUES ('" + name.Text + "','" + familyname.Text + "','" + gender.Text + "','" + user_bd + "','" + phonenumber.Text + "','" + address.Text + "','" + user_reg_date + "', 0);";
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("عضویت با موفقیت انجام شد");
+            this.Visible = false;
+
         }
 
         private void button2_Click(object sender, EventArgs e)

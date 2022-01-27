@@ -32,7 +32,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.TextBox();
             this.address = new System.Windows.Forms.TextBox();
-            this.birthday = new System.Windows.Forms.TextBox();
             this.familyname = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -43,8 +42,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.registerdate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // phonenumber
@@ -77,13 +77,6 @@
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(478, 22);
             this.address.TabIndex = 60;
-            // 
-            // birthday
-            // 
-            this.birthday.Location = new System.Drawing.Point(152, 201);
-            this.birthday.Name = "birthday";
-            this.birthday.Size = new System.Drawing.Size(478, 22);
-            this.birthday.TabIndex = 59;
             // 
             // familyname
             // 
@@ -181,13 +174,6 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "فرم عضویت";
             // 
-            // registerdate
-            // 
-            this.registerdate.Location = new System.Drawing.Point(152, 313);
-            this.registerdate.Name = "registerdate";
-            this.registerdate.Size = new System.Drawing.Size(478, 22);
-            this.registerdate.TabIndex = 67;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -199,6 +185,20 @@
             this.label2.Text = "تاریخ ثبت نام";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(430, 202);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 68;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(429, 316);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 69;
+            // 
             // add_new_user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,7 +207,8 @@
             this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.registerdate);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -215,7 +216,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gender);
             this.Controls.Add(this.address);
-            this.Controls.Add(this.birthday);
             this.Controls.Add(this.familyname);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label8);
@@ -238,7 +238,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox gender;
         private System.Windows.Forms.TextBox address;
-        private System.Windows.Forms.TextBox birthday;
         private System.Windows.Forms.TextBox familyname;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label8;
@@ -249,7 +248,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox registerdate;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
