@@ -37,7 +37,7 @@ namespace OS_Lab_4001
             cmd.Connection = con;
             cmd.CommandText = "Select * From tblAdmin where aUser ='" + textBox1.Text + "' And aPass = '" + textBox2.Text + "'";
             dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if (user=="a")
             {
                 MessageBox.Show("ورود موفقیت آمیز بود");
 

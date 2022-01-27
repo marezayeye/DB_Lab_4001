@@ -103,7 +103,9 @@ namespace OS_Lab_4001
             dr = cmd.ExecuteReader();
             MessageBox.Show("دسته بندی تغییر یافت");
             con.Close();
-            dataGridView1.Refresh();
+            this.Visible = false;
+            category_form d = new category_form();
+            d.Visible = true;
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
