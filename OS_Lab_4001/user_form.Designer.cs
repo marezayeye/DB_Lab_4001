@@ -284,7 +284,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1185, 449);
+            this.ClientSize = new System.Drawing.Size(1214, 449);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.deleteuserbox);

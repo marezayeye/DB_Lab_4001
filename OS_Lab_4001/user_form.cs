@@ -44,7 +44,7 @@ namespace OS_Lab_4001
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            
             add_new_user_form mf = new add_new_user_form();
             mf.Visible = true;
         }
