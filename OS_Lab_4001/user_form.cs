@@ -63,9 +63,10 @@ namespace OS_Lab_4001
             if (dialog == DialogResult.Yes)
             {
                 string bns = deleteuserbox.Text;
-                SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tbluser where User_id like '" + bns + "'", con);
+                SqlDataAdapter sqlDA = new SqlDataAdapter("DELETE from tbluser where uId like '" + bns + "'", con);
                 DataTable dtbl = new DataTable();
                 sqlDA.Fill(dtbl);
+                user_dataGridView.Refresh();
                 MessageBox.Show("حذف غضویت با موفقیت انجام شد");
             }
             else

@@ -322,7 +322,7 @@ namespace OS_Lab_4001
             // 
             // panel
             // 
-            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Controls.Add(this.label11);
             this.panel.Controls.Add(this.tags_books);
@@ -363,6 +363,7 @@ namespace OS_Lab_4001
             this.book_dataGridView.AllowUserToDeleteRows = false;
             this.book_dataGridView.AutoGenerateColumns = false;
             this.book_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.book_dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.book_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.book_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.books_name_data,
