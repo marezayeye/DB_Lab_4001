@@ -39,9 +39,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.user_dataGridView = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.deleteuserbox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.Users_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,13 +47,17 @@
             this.phonenumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regesterdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteuserbox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.user_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(919, 384);
+            this.button6.Location = new System.Drawing.Point(939, 374);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(190, 41);
             this.button6.TabIndex = 37;
@@ -67,9 +68,9 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(939, 314);
+            this.button5.Location = new System.Drawing.Point(919, 302);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 47);
+            this.button5.Size = new System.Drawing.Size(248, 47);
             this.button5.TabIndex = 36;
             this.button5.Text = "حذف عضویت";
             this.button5.UseVisualStyleBackColor = false;
@@ -77,7 +78,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(964, 173);
+            this.button3.Location = new System.Drawing.Point(919, 137);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 34);
             this.button3.TabIndex = 35;
@@ -86,7 +87,7 @@
             // 
             // user_familyname
             // 
-            this.user_familyname.Location = new System.Drawing.Point(906, 145);
+            this.user_familyname.Location = new System.Drawing.Point(906, 109);
             this.user_familyname.Name = "user_familyname";
             this.user_familyname.Size = new System.Drawing.Size(190, 22);
             this.user_familyname.TabIndex = 34;
@@ -96,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(1102, 150);
+            this.label4.Location = new System.Drawing.Point(1102, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 33;
@@ -104,7 +105,7 @@
             // 
             // user_id
             // 
-            this.user_id.Location = new System.Drawing.Point(906, 58);
+            this.user_id.Location = new System.Drawing.Point(906, 27);
             this.user_id.Name = "user_id";
             this.user_id.Size = new System.Drawing.Size(190, 22);
             this.user_id.TabIndex = 32;
@@ -114,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(1105, 63);
+            this.label2.Location = new System.Drawing.Point(1105, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 31;
@@ -124,7 +125,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(1123, 17);
+            this.label1.Location = new System.Drawing.Point(1132, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 30;
@@ -132,7 +133,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(964, 86);
+            this.button2.Location = new System.Drawing.Point(919, 55);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 34);
             this.button2.TabIndex = 29;
@@ -143,9 +144,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Location = new System.Drawing.Point(939, 213);
+            this.button1.Location = new System.Drawing.Point(919, 189);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 47);
+            this.button1.Size = new System.Drawing.Size(128, 47);
             this.button1.TabIndex = 28;
             this.button1.Text = "فرم عضویت";
             this.button1.UseVisualStyleBackColor = false;
@@ -153,6 +154,7 @@
             // 
             // user_dataGridView
             // 
+            this.user_dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.user_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.user_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Users_Id,
@@ -171,34 +173,6 @@
             this.user_dataGridView.Size = new System.Drawing.Size(872, 398);
             this.user_dataGridView.TabIndex = 27;
             this.user_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(1107, 269);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "کد عضویت ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // deleteuserbox
-            // 
-            this.deleteuserbox.Location = new System.Drawing.Point(906, 282);
-            this.deleteuserbox.Name = "deleteuserbox";
-            this.deleteuserbox.Size = new System.Drawing.Size(190, 22);
-            this.deleteuserbox.TabIndex = 39;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(1106, 297);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "برای حذف";
             // 
             // Users_Id
             // 
@@ -264,6 +238,45 @@
             this.regesterdate.Name = "regesterdate";
             this.regesterdate.Width = 125;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(1107, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "کد عضویت ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // deleteuserbox
+            // 
+            this.deleteuserbox.Location = new System.Drawing.Point(906, 264);
+            this.deleteuserbox.Name = "deleteuserbox";
+            this.deleteuserbox.Size = new System.Drawing.Size(190, 22);
+            this.deleteuserbox.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(1105, 281);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "برای حذف";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button4.Location = new System.Drawing.Point(1053, 189);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 47);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "اصلاح مشخصات";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,6 +285,7 @@
             this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1185, 449);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.deleteuserbox);
             this.Controls.Add(this.label3);
@@ -318,5 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phonenumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn adress;
         private System.Windows.Forms.DataGridViewTextBoxColumn regesterdate;
+        private System.Windows.Forms.Button button4;
     }
 }

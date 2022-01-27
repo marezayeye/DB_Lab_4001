@@ -120,5 +120,11 @@ namespace OS_Lab_4001
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            edit_user eu = new edit_user();
+            eu.Visible = true;
+        }
     }
 }
