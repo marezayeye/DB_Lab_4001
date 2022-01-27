@@ -58,9 +58,6 @@ namespace OS_Lab_4001
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.book_dataGridView = new System.Windows.Forms.DataGridView();
-            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
-            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.books_name_data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Athour = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +68,9 @@ namespace OS_Lab_4001
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tags = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brrowed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.library_DBDataSet = new OS_Lab_4001.Library_DBDataSet();
+            this.libraryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.library_DBDataSet)).BeginInit();
@@ -80,7 +80,7 @@ namespace OS_Lab_4001
             // remove_button
             // 
             this.remove_button.BackColor = System.Drawing.Color.Red;
-            this.remove_button.Location = new System.Drawing.Point(12, 33);
+            this.remove_button.Location = new System.Drawing.Point(114, 359);
             this.remove_button.Name = "remove_button";
             this.remove_button.Size = new System.Drawing.Size(75, 31);
             this.remove_button.TabIndex = 0;
@@ -91,7 +91,7 @@ namespace OS_Lab_4001
             // add_button
             // 
             this.add_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.add_button.Location = new System.Drawing.Point(93, 33);
+            this.add_button.Location = new System.Drawing.Point(195, 359);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 32);
             this.add_button.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace OS_Lab_4001
             // eddit_button
             // 
             this.eddit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.eddit_button.Location = new System.Drawing.Point(93, 71);
+            this.eddit_button.Location = new System.Drawing.Point(195, 397);
             this.eddit_button.Name = "eddit_button";
             this.eddit_button.Size = new System.Drawing.Size(75, 32);
             this.eddit_button.TabIndex = 3;
@@ -113,7 +113,7 @@ namespace OS_Lab_4001
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.search_button.Location = new System.Drawing.Point(12, 70);
+            this.search_button.Location = new System.Drawing.Point(114, 396);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(75, 32);
             this.search_button.TabIndex = 4;
@@ -124,7 +124,7 @@ namespace OS_Lab_4001
             // back_dashboard_button
             // 
             this.back_dashboard_button.BackColor = System.Drawing.Color.Aqua;
-            this.back_dashboard_button.Location = new System.Drawing.Point(1232, 13);
+            this.back_dashboard_button.Location = new System.Drawing.Point(1029, 381);
             this.back_dashboard_button.Name = "back_dashboard_button";
             this.back_dashboard_button.Size = new System.Drawing.Size(75, 34);
             this.back_dashboard_button.TabIndex = 5;
@@ -135,9 +135,9 @@ namespace OS_Lab_4001
             // lend_button
             // 
             this.lend_button.BackColor = System.Drawing.Color.Aqua;
-            this.lend_button.Location = new System.Drawing.Point(1232, 134);
+            this.lend_button.Location = new System.Drawing.Point(948, 421);
             this.lend_button.Name = "lend_button";
-            this.lend_button.Size = new System.Drawing.Size(75, 29);
+            this.lend_button.Size = new System.Drawing.Size(75, 35);
             this.lend_button.TabIndex = 6;
             this.lend_button.Text = "امانات";
             this.lend_button.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@ namespace OS_Lab_4001
             // scale_button
             // 
             this.scale_button.BackColor = System.Drawing.Color.Aqua;
-            this.scale_button.Location = new System.Drawing.Point(1232, 93);
+            this.scale_button.Location = new System.Drawing.Point(1029, 421);
             this.scale_button.Name = "scale_button";
             this.scale_button.Size = new System.Drawing.Size(75, 35);
             this.scale_button.TabIndex = 7;
@@ -157,7 +157,7 @@ namespace OS_Lab_4001
             // membership_button
             // 
             this.membership_button.BackColor = System.Drawing.Color.Aqua;
-            this.membership_button.Location = new System.Drawing.Point(1232, 53);
+            this.membership_button.Location = new System.Drawing.Point(948, 381);
             this.membership_button.Name = "membership_button";
             this.membership_button.Size = new System.Drawing.Size(75, 34);
             this.membership_button.TabIndex = 8;
@@ -168,8 +168,9 @@ namespace OS_Lab_4001
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label11.Location = new System.Drawing.Point(414, 127);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(369, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 90;
@@ -177,7 +178,7 @@ namespace OS_Lab_4001
             // 
             // tags_books
             // 
-            this.tags_books.Location = new System.Drawing.Point(245, 127);
+            this.tags_books.Location = new System.Drawing.Point(200, 128);
             this.tags_books.Name = "tags_books";
             this.tags_books.Size = new System.Drawing.Size(158, 22);
             this.tags_books.TabIndex = 89;
@@ -186,8 +187,9 @@ namespace OS_Lab_4001
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label10.Location = new System.Drawing.Point(509, 83);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(464, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 17);
             this.label10.TabIndex = 88;
@@ -195,7 +197,7 @@ namespace OS_Lab_4001
             // 
             // category_books
             // 
-            this.category_books.Location = new System.Drawing.Point(340, 83);
+            this.category_books.Location = new System.Drawing.Point(295, 84);
             this.category_books.Name = "category_books";
             this.category_books.Size = new System.Drawing.Size(158, 22);
             this.category_books.TabIndex = 87;
@@ -204,8 +206,9 @@ namespace OS_Lab_4001
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label12.Location = new System.Drawing.Point(509, 58);
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(464, 59);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 17);
             this.label12.TabIndex = 86;
@@ -213,7 +216,7 @@ namespace OS_Lab_4001
             // 
             // year_books
             // 
-            this.year_books.Location = new System.Drawing.Point(340, 55);
+            this.year_books.Location = new System.Drawing.Point(295, 56);
             this.year_books.Name = "year_books";
             this.year_books.Size = new System.Drawing.Size(158, 22);
             this.year_books.TabIndex = 85;
@@ -222,8 +225,9 @@ namespace OS_Lab_4001
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label14.Location = new System.Drawing.Point(298, 27);
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(253, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 17);
             this.label14.TabIndex = 82;
@@ -231,7 +235,7 @@ namespace OS_Lab_4001
             // 
             // location_books
             // 
-            this.location_books.Location = new System.Drawing.Point(129, 27);
+            this.location_books.Location = new System.Drawing.Point(84, 28);
             this.location_books.Name = "location_books";
             this.location_books.Size = new System.Drawing.Size(158, 22);
             this.location_books.TabIndex = 81;
@@ -241,8 +245,9 @@ namespace OS_Lab_4001
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label15.Location = new System.Drawing.Point(298, 80);
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(253, 81);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 17);
             this.label15.TabIndex = 80;
@@ -251,8 +256,9 @@ namespace OS_Lab_4001
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label16.Location = new System.Drawing.Point(298, 55);
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(253, 56);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 17);
             this.label16.TabIndex = 79;
@@ -261,8 +267,9 @@ namespace OS_Lab_4001
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label18.Location = new System.Drawing.Point(509, 30);
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(464, 31);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(40, 17);
             this.label18.TabIndex = 77;
@@ -271,8 +278,9 @@ namespace OS_Lab_4001
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label19.Location = new System.Drawing.Point(63, 113);
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label19.Location = new System.Drawing.Point(165, 436);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 17);
             this.label19.TabIndex = 76;
@@ -280,7 +288,7 @@ namespace OS_Lab_4001
             // 
             // author_books
             // 
-            this.author_books.Location = new System.Drawing.Point(340, 27);
+            this.author_books.Location = new System.Drawing.Point(295, 28);
             this.author_books.Name = "author_books";
             this.author_books.Size = new System.Drawing.Size(158, 22);
             this.author_books.TabIndex = 75;
@@ -289,7 +297,7 @@ namespace OS_Lab_4001
             // 
             // publisher_books
             // 
-            this.publisher_books.Location = new System.Drawing.Point(129, 83);
+            this.publisher_books.Location = new System.Drawing.Point(84, 84);
             this.publisher_books.Name = "publisher_books";
             this.publisher_books.Size = new System.Drawing.Size(158, 22);
             this.publisher_books.TabIndex = 74;
@@ -297,7 +305,7 @@ namespace OS_Lab_4001
             // 
             // translator_books
             // 
-            this.translator_books.Location = new System.Drawing.Point(129, 55);
+            this.translator_books.Location = new System.Drawing.Point(84, 56);
             this.translator_books.Name = "translator_books";
             this.translator_books.Size = new System.Drawing.Size(158, 22);
             this.translator_books.TabIndex = 73;
@@ -305,7 +313,7 @@ namespace OS_Lab_4001
             // 
             // book_name_search
             // 
-            this.book_name_search.Location = new System.Drawing.Point(12, 139);
+            this.book_name_search.Location = new System.Drawing.Point(114, 462);
             this.book_name_search.Name = "book_name_search";
             this.book_name_search.Size = new System.Drawing.Size(158, 22);
             this.book_name_search.TabIndex = 71;
@@ -315,6 +323,7 @@ namespace OS_Lab_4001
             // panel
             // 
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Controls.Add(this.label11);
             this.panel.Controls.Add(this.tags_books);
             this.panel.Controls.Add(this.translator_books);
@@ -329,21 +338,23 @@ namespace OS_Lab_4001
             this.panel.Controls.Add(this.label15);
             this.panel.Controls.Add(this.label14);
             this.panel.Controls.Add(this.location_books);
-            this.panel.Location = new System.Drawing.Point(378, 337);
+            this.panel.Location = new System.Drawing.Point(310, 334);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(703, 191);
+            this.panel.Size = new System.Drawing.Size(605, 200);
             this.panel.TabIndex = 91;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(595, 9);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(369, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 17);
+            this.label1.Size = new System.Drawing.Size(474, 17);
             this.label1.TabIndex = 93;
-            this.label1.Text = "برای ویرایش بر روی بارکد کتاب مورد نظر کلیک کنید ";
+            this.label1.Text = "برای ویرایش بر روی بارکد کتاب مورد نظر کلیک کنید سپس یه کمک فیلد ها ویرایش خود را" +
+    " انجام دهید";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // book_dataGridView
@@ -365,7 +376,7 @@ namespace OS_Lab_4001
             this.tags,
             this.brrowed});
             this.book_dataGridView.DataSource = this.library_DBDataSet;
-            this.book_dataGridView.Location = new System.Drawing.Point(174, 33);
+            this.book_dataGridView.Location = new System.Drawing.Point(72, 41);
             this.book_dataGridView.Name = "book_dataGridView";
             this.book_dataGridView.ReadOnly = true;
             this.book_dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -375,27 +386,6 @@ namespace OS_Lab_4001
             this.book_dataGridView.TabIndex = 92;
             this.book_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.book_dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // library_DBDataSet
-            // 
-            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
-            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libraryDBDataSetBindingSource
-            // 
-            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
-            this.libraryDBDataSetBindingSource.Position = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(52, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "تازه";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // books_name_data
             // 
@@ -477,13 +467,35 @@ namespace OS_Lab_4001
             this.brrowed.Name = "brrowed";
             this.brrowed.ReadOnly = true;
             // 
+            // library_DBDataSet
+            // 
+            this.library_DBDataSet.DataSetName = "Library_DBDataSet";
+            this.library_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libraryDBDataSetBindingSource
+            // 
+            this.libraryDBDataSetBindingSource.DataSource = this.library_DBDataSet;
+            this.libraryDBDataSetBindingSource.Position = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(149, 490);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 94;
+            this.button1.Text = "تازه";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Books_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1319, 530);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1191, 530);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.book_dataGridView);
