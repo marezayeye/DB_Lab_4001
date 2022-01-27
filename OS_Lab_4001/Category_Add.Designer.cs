@@ -29,7 +29,6 @@ namespace OS_Lab_4001
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category_Add));
             this.backToCategory = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.AddCategoryLBl = new System.Windows.Forms.TextBox();
@@ -38,41 +37,43 @@ namespace OS_Lab_4001
             // 
             // backToCategory
             // 
-            this.backToCategory.Location = new System.Drawing.Point(11, 11);
-            this.backToCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.backToCategory.BackColor = System.Drawing.Color.IndianRed;
+            this.backToCategory.ForeColor = System.Drawing.Color.White;
+            this.backToCategory.Location = new System.Drawing.Point(231, 124);
+            this.backToCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backToCategory.Name = "backToCategory";
-            this.backToCategory.Size = new System.Drawing.Size(120, 28);
+            this.backToCategory.Size = new System.Drawing.Size(160, 48);
             this.backToCategory.TabIndex = 25;
             this.backToCategory.Text = "بازگشت به لیست";
-            this.backToCategory.UseVisualStyleBackColor = true;
+            this.backToCategory.UseVisualStyleBackColor = false;
             this.backToCategory.Click += new System.EventHandler(this.backToCategoryEvent);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(563, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(297, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(94, 17);
             this.label3.TabIndex = 28;
             this.label3.Text = "نام دسته بندی کتاب";
             // 
             // AddCategoryLBl
             // 
-            this.AddCategoryLBl.Location = new System.Drawing.Point(388, 41);
-            this.AddCategoryLBl.Margin = new System.Windows.Forms.Padding(2);
+            this.AddCategoryLBl.Location = new System.Drawing.Point(12, 84);
+            this.AddCategoryLBl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddCategoryLBl.Name = "AddCategoryLBl";
-            this.AddCategoryLBl.Size = new System.Drawing.Size(285, 20);
+            this.AddCategoryLBl.Size = new System.Drawing.Size(379, 22);
             this.AddCategoryLBl.TabIndex = 27;
             // 
             // addCategoryBtn
             // 
-            this.addCategoryBtn.BackColor = System.Drawing.SystemColors.InfoText;
+            this.addCategoryBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.addCategoryBtn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.addCategoryBtn.Location = new System.Drawing.Point(470, 65);
-            this.addCategoryBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addCategoryBtn.Location = new System.Drawing.Point(12, 124);
+            this.addCategoryBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addCategoryBtn.Name = "addCategoryBtn";
-            this.addCategoryBtn.Size = new System.Drawing.Size(90, 39);
+            this.addCategoryBtn.Size = new System.Drawing.Size(213, 48);
             this.addCategoryBtn.TabIndex = 26;
             this.addCategoryBtn.Text = "ثبت دسته بندی جدید";
             this.addCategoryBtn.UseVisualStyleBackColor = false;
@@ -80,16 +81,17 @@ namespace OS_Lab_4001
             // 
             // Category_Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(744, 356);
+            this.BackgroundImage = global::OS_Lab_4001.Properties.Resources._39_Create_a_Login_Form_in_Adobe_Photoshop_From_Scratch;
+            this.ClientSize = new System.Drawing.Size(436, 241);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddCategoryLBl);
             this.Controls.Add(this.addCategoryBtn);
             this.Controls.Add(this.backToCategory);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Category_Add";
-            this.Text = "Category_Add";
+            this.Text = "افزودن دسته بندی";
             this.Load += new System.EventHandler(this.Category_Add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
