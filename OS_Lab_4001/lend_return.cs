@@ -38,10 +38,12 @@ namespace OS_Lab_4001
         private void button3_Click(object sender, EventArgs e)
         {
             lr_cmd = new SqlCommand();
-            int lr_lend_id = int.Parse(textBox1.Text);
+            int lr_lend_id = Convert.ToInt32(textBox1.Text);
             lr_con.Open();
-            lr_cmd.CommandText = "SELECT * FROM tblLend WHERE lId = '" + textBox1.Text + "' AND lReturned = 0 ";
+            lr_cmd.CommandText = "SELECT * FROM tblLend WHERE lId = '" + lr_lend_id + "' AND lReturned = 0 ";
             lr_cmd.Connection = lr_con;
+            lr_dr = lr_cmd.ExecuteReader();
+
 
             if (lr_dr.Read())
             {
@@ -119,12 +121,12 @@ namespace OS_Lab_4001
                     command.ExecuteNonQuery();
 
                     //executing query on tblUser
-                    command.CommandText = "UPDATE tblUser SET uBorrowedcount = uBorrowedcount -1 1 WHERE uId = @uid;";
+                    command.CommandText = "UPDATE tblUser SET uBorrowedcount = uBorrowedcount -1 WHERE uId = @uid;";
                     command.Parameters.Add(new SqlParameter("uid", lr_user_id));
                     command.ExecuteNonQuery();
 
                     //executing query on tblBook
-                    command.CommandText = "UPDATE tblBook SET bBorrowd = 0 WHERE bID = @bid;";
+                    command.CommandText = "UPDATE tblBook SET bBorrowd = 0 WHERE bID = @bid1;";
                     command.Parameters.Add(new SqlParameter("bid1", lr_book_id));
                     command.ExecuteNonQuery();
                 }
