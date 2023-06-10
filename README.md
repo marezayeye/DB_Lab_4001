@@ -1,4 +1,14 @@
 # DB_Lab_4001
+To run : 
+1. git clone the repository
+2. attach DB files to MSSQLSERVER
+3. Open the cloned repo in VS as a Project via .sln file
+4. Add data source to the project via Project> add data source menu
+5. Copy Connection String and replace it in .cs forms according to Connection Strings Location file in main repo.
+6. Rebuild and Run.
+
+
+
 To Do List :
 1. <strike>Syncronizing Connection Strings across all Forms (Recommended CS: "Data Source=.;Initial Catalog=Library_DB;Integrated Security=True")
  
